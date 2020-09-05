@@ -1,4 +1,4 @@
-﻿public interface ClickableObject
+﻿public interface IClickableObject
 {
     void LeftClick();
     void RightClick();

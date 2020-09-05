@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
                     agent.SetDestination(hit.point);
                 }
                 else {
-                    var interaction = hit.transform.GetComponent<ClickableObject>();
+                    var interaction = hit.transform.GetComponent<IClickableObject>();
                     interaction.LeftClick();
                 }
             }
@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
-                var interaction = hit.transform.GetComponent<ClickableObject>();
+                var interaction = hit.transform.GetComponent<IClickableObject>();
                 interaction.RightClick();
             }
         }

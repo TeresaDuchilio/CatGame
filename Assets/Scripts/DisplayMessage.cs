@@ -1,18 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class DisplayMessage : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Text textObject;
+
     void Start()
     {
-        
+        textObject = GetComponent<Text>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetText(string newText)
     {
-        
+        textObject.text = newText;
+    }
+
+    public void Test()
+    {
+        Debug.Log("yay");
     }
 }
