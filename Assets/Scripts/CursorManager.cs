@@ -19,7 +19,8 @@ public class CursorManager : MonoBehaviour {
     public enum CursorType {
         Arrow,
         LookAndInteract,
-        Look
+        Look,
+        MoveScene
     }
 
     private void Awake() {
