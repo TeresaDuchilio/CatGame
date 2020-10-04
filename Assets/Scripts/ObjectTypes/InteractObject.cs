@@ -4,7 +4,12 @@ using UnityEngine.UI;
 public class InteractObject : MonoBehaviour, IClickableObject
 {
     public Text text;
-    public EventManager eventManager;
+    EventManager eventManager;
+
+    void Start()
+    {
+        eventManager = GameObject.FindWithTag("MasterObject").GetComponent<EventManager>();
+    }
 
     public void LeftClick()
     {

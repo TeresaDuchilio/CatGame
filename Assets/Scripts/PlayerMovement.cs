@@ -6,7 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
     NavMeshAgent agent;
 
-    // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -41,8 +40,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void WarpToPosition(Vector3 position)
+    public void WarpToPosition(Vector3 position, float rotation)
     {
         agent.Warp(position);
+        transform.rotation = transform.rotation * Quaternion.AngleAxis(rotation, Vector3.up);  
     }
 }

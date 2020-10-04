@@ -309,9 +309,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebdec8188bfa3e740b2135ec3b440562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventManager: {fileID: 0}
   sceneName: Flur
   characterPosition: {x: -5, y: 0.5, z: 0.5}
+  rotation: 0
 --- !u!114 &440471071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -392,9 +392,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebdec8188bfa3e740b2135ec3b440562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventManager: {fileID: 0}
   sceneName: Flur
   characterPosition: {x: -5, y: 0.5, z: 0.5}
+  rotation: 0
 --- !u!114 &603594588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -475,9 +475,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebdec8188bfa3e740b2135ec3b440562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventManager: {fileID: 0}
-  sceneName: Flur
-  characterPosition: {x: -5, y: 0.5, z: 0.5}
+  sceneName: Bathroom
+  characterPosition: {x: -8.28, y: 0.5, z: 2.01}
+  rotation: -90
 --- !u!114 &678861135
 MonoBehaviour:
   m_ObjectHideFlags: 0

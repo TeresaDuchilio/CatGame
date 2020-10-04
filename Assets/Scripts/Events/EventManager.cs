@@ -17,9 +17,9 @@ public class EventManager : MonoBehaviour
         lookAtEvent.Invoke(text);
     }
 
-    public void InvoceSceneChange(string sceneName, Vector3 characterPosition)
+    public void InvoceSceneChange(string sceneName, Vector3 characterPosition, float rotation)
     {
         sceneChangeEvent.Invoke(sceneName);
-        moveObjectEvent.Invoke(characterPosition);
+        moveObjectEvent.Invoke(characterPosition, rotation);
     }
 }
