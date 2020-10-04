@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: aa1750abb3bcaea469e8336632d5e20e, type: 2}
 --- !u!1001 &426729072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -193,6 +193,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d0cd778de47207248bdc440cdb92391b, type: 2}
+    - target: {fileID: 4125005426132394364, guid: a8090d441196ec143bd5cfe6edce299e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125005426132394364, guid: a8090d441196ec143bd5cfe6edce299e,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8090d441196ec143bd5cfe6edce299e, type: 3}
 --- !u!1001 &491356823
@@ -261,6 +271,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ColinShelf1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157112825453620031, guid: 47b3bb54f6a152e42ad8f8e510ed9fa4,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157112825453620031, guid: 47b3bb54f6a152e42ad8f8e510ed9fa4,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b3bb54f6a152e42ad8f8e510ed9fa4, type: 3}
@@ -418,10 +438,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1174239625493312104, guid: efe870fc70d6cdb4d8d303fce836230c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -1174239625493312104, guid: efe870fc70d6cdb4d8d303fce836230c,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: efe870fc70d6cdb4d8d303fce836230c,
         type: 3}
       propertyPath: m_Name
       value: ColinShelf2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2086277121882076167, guid: efe870fc70d6cdb4d8d303fce836230c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2086277121882076167, guid: efe870fc70d6cdb4d8d303fce836230c,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efe870fc70d6cdb4d8d303fce836230c, type: 3}
@@ -432,6 +472,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6624183354033518570, guid: 7cf8bff31270c6a418e37b778e28dbc1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 7cf8bff31270c6a418e37b778e28dbc1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -497,6 +542,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 596f32d7268af724aa5ad20ed98a04e1, type: 2}
+    - target: {fileID: 3540862980031425035, guid: 7cf8bff31270c6a418e37b778e28dbc1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540862980031425035, guid: 7cf8bff31270c6a418e37b778e28dbc1,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf8bff31270c6a418e37b778e28dbc1, type: 3}
 --- !u!1001 &1564403854
@@ -565,6 +620,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ColinBed
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 997972c488154a340b81c489d805260c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 997972c488154a340b81c489d805260c,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 997972c488154a340b81c489d805260c, type: 3}
@@ -637,6 +702,12 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   interactEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  sceneChangeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  moveObjectEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!81 &1675238538

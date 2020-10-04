@@ -9,7 +9,6 @@ public class InteractObject : MonoBehaviour, IClickableObject
     public void LeftClick()
     {
         PutText("Inspect");
-        Debug.Log("Inspect");
     }
 
     public void RightClick()

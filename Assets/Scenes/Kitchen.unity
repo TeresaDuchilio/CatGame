@@ -106,7 +106,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.12
+    agentRadius: 0.31
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.38
@@ -114,13 +114,13 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.04
+    cellSize: 0.10333333
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: fd45ba072145c5044afa14e093c3a93c, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 0ec2b3708e2a0414f9b84f9d70e85e08, type: 2}
 --- !u!1 &22112915
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,7 +151,7 @@ Transform:
   - {fileID: 1882727646}
   - {fileID: 567471009}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &52397603
 GameObject:
@@ -241,9 +241,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 170152658}
-  - component: {fileID: 170152657}
+  - component: {fileID: 170152660}
   - component: {fileID: 170152656}
   - component: {fileID: 170152659}
+  - component: {fileID: 170152657}
   m_Layer: 0
   m_Name: MasterObject
   m_TagString: Untagged
@@ -301,7 +302,46 @@ MonoBehaviour:
         m_CallState: 2
   interactEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 368243656}
+        m_MethodName: SetText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  sceneChangeEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 170152660}
+        m_MethodName: ChangeSceneTo
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  moveObjectEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7664722647875769934}
+        m_MethodName: WarpToPosition
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &170152658
 Transform:
   m_ObjectHideFlags: 0
@@ -326,6 +366,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b4a079ee57c00848aec38ce8aead0f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &170152660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170152655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 983ba30432a2bdd458c904c0c5306da3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &207940433
@@ -485,7 +537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 368243657}
-  eventManager: {fileID: 0}
+  eventManager: {fileID: 170152657}
 --- !u!1 &368243654
 GameObject:
   m_ObjectHideFlags: 0
@@ -667,7 +719,7 @@ Transform:
   m_Children:
   - {fileID: 1806532925}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 1.1, y: -180.1, z: 0}
 --- !u!1001 &567471008
 PrefabInstance:
@@ -850,6 +902,7 @@ GameObject:
   - component: {fileID: 588928206}
   - component: {fileID: 588928205}
   - component: {fileID: 588928204}
+  - component: {fileID: 588928208}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -937,6 +990,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &588928208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588928203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4a079ee57c00848aec38ce8aead0f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &589107344
 GameObject:
   m_ObjectHideFlags: 0
@@ -1094,7 +1159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 368243657}
-  eventManager: {fileID: 0}
+  eventManager: {fileID: 170152657}
 --- !u!1 &611254496
 GameObject:
   m_ObjectHideFlags: 0
@@ -1473,6 +1538,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: kitchen_Cabinets
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 81ad360bc3377f9439b18ade3c958f70,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 81ad360bc3377f9439b18ade3c958f70,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 81ad360bc3377f9439b18ade3c958f70,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81ad360bc3377f9439b18ade3c958f70, type: 3}
@@ -1901,7 +1981,7 @@ Transform:
   - {fileID: 1967084852}
   - {fileID: 840720731}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1255176442
 PrefabInstance:
@@ -2283,6 +2363,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: a5058d841b2dd164d9000d175380f377,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: a5058d841b2dd164d9000d175380f377,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5058d841b2dd164d9000d175380f377, type: 3}
 --- !u!1 &1806532924
@@ -2365,7 +2455,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebdec8188bfa3e740b2135ec3b440562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventManager: {fileID: 170152657}
   sceneName: Flur
+  characterPosition: {x: -5, y: 0.5, z: 0.5}
 --- !u!1 &1848124231
 GameObject:
   m_ObjectHideFlags: 0
@@ -2784,7 +2876,7 @@ Transform:
   - {fileID: 609263184}
   - {fileID: 7244275113038823164}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4542152843203152
 Transform:
@@ -3030,8 +3122,8 @@ GameObject:
   m_Name: Wall_iso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!33 &453566419247570050
 MeshFilter:
@@ -3481,13 +3573,27 @@ GameObject:
   - component: {fileID: 8303119124417433051}
   - component: {fileID: 1717349861912196042}
   - component: {fileID: 1774809043875686774}
+  - component: {fileID: 1814235132744053675}
   m_Layer: 0
   m_Name: Floor_Kitchen
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
   m_IsActive: 1
+--- !u!65 &1814235132744053675
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814235132744053674}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 14.2638855, y: 8.329922, z: 0.040000018}
+  m_Center: {x: -6.816184, y: 3.1934333, z: -0.9900466}
 --- !u!1 &1959924605808303074
 GameObject:
   m_ObjectHideFlags: 0
@@ -3519,8 +3625,8 @@ GameObject:
   m_Name: sofa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 2
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &2000724392337169831
 GameObject:
@@ -4622,7 +4728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 368243657}
-  eventManager: {fileID: 0}
+  eventManager: {fileID: 170152657}
 --- !u!114 &5968267921619111154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5170,6 +5276,7 @@ GameObject:
   - component: {fileID: 7664722647875769933}
   - component: {fileID: 7664722647875769935}
   - component: {fileID: 7664722647875769934}
+  - component: {fileID: 7664722647875769937}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -5230,6 +5337,18 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &7664722647875769937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7664722647875769932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b4a079ee57c00848aec38ce8aead0f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7669515414785588096
 Transform:
   m_ObjectHideFlags: 0

@@ -40,4 +40,9 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+    public void WarpToPosition(Vector3 position)
+    {
+        agent.Warp(position);
+    }
 }

@@ -1,14 +1,14 @@
 ﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.SceneManagement;
 
 public class MoveSceneObject : MonoBehaviour, IClickableObject
 {
+    public EventManager eventManager;
     public string sceneName;
+    public Vector3 characterPosition;
 
     public void LeftClick()
     {
-        SceneManager.LoadScene(sceneName);
+        eventManager.InvoceSceneChange(sceneName, characterPosition);
     }
 
     public void RightClick()

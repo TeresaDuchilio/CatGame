@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 9a845698c81929445a80de88bc283a61, type: 2}
 --- !u!1 &17618046
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,6 +190,12 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   interactEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  sceneChangeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  moveObjectEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!81 &17618049
@@ -411,10 +417,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1435745037420900390, guid: b6aaee64d54ca9e499930d6abcadc507,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: b6aaee64d54ca9e499930d6abcadc507,
         type: 3}
       propertyPath: m_Name
       value: Duchgangszimmer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230587208582541622, guid: b6aaee64d54ca9e499930d6abcadc507,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7230587208582541622, guid: b6aaee64d54ca9e499930d6abcadc507,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6aaee64d54ca9e499930d6abcadc507, type: 3}
