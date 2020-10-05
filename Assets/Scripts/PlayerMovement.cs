@@ -24,7 +24,10 @@ public class PlayerMovement : MonoBehaviour
                 }
                 else {
                     var interaction = hit.transform.GetComponent<IClickableObject>();
-                    interaction.LeftClick();
+                    if (interaction != null)
+                    {
+                        interaction.LeftClick();
+                    }
                 }
             }
         }
@@ -35,7 +38,10 @@ public class PlayerMovement : MonoBehaviour
             if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
                 var interaction = hit.transform.GetComponent<IClickableObject>();
-                interaction.RightClick();
+                if (interaction != null)
+                {
+                    interaction.RightClick();
+                }
             }
         }
     }

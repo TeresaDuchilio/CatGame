@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f133db29f00321643848fbbe751031c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorType: 2
+  cursorType: 3
 --- !u!65 &43068988
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -713,8 +713,6 @@ GameObject:
   - component: {fileID: 1876568436}
   - component: {fileID: 1876568435}
   - component: {fileID: 1876568434}
-  - component: {fileID: 1876568433}
-  - component: {fileID: 1876568432}
   m_Layer: 0
   m_Name: Camera Bathroom
   m_TagString: MainCamera
@@ -722,63 +720,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1876568432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1876568431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a75bb3629a85e85448c28a775f12eb68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursorTextureList:
-  - cursorType: 0
-    texture: {fileID: 2800000, guid: 02d1feb97c2c6b648a38c4ecb988ac83, type: 3}
-    offset: {x: 0.1, y: 0.1}
-  - cursorType: 1
-    texture: {fileID: 2800000, guid: 02b4b7d35e31a3145ad98a60c8bec8d4, type: 3}
-    offset: {x: 1, y: 1}
-  - cursorType: 2
-    texture: {fileID: 2800000, guid: 409f72fcaecc3af4290d4f7386a601e8, type: 3}
-    offset: {x: 0, y: 0}
---- !u!114 &1876568433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1876568431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79509f87541f3a34da8041dfeadb9cfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lookAtEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: SetText
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  interactEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  sceneChangeEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  moveObjectEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!81 &1876568434
 AudioListener:
   m_ObjectHideFlags: 0

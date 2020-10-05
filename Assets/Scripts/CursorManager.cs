@@ -28,7 +28,7 @@ public class CursorManager : MonoBehaviour {
     }
 
     private void Start() {
-        SetActiveCursorType(CursorType.Arrow);
+        ResetCursor();
     }
 
 
@@ -42,6 +42,11 @@ public class CursorManager : MonoBehaviour {
         {
             Debug.LogError("Cursor type not found");
         }
+    }
+
+    public void ResetCursor()
+    {
+        SetActiveCursorType(CursorType.Arrow);
     }
 
     [System.Serializable]
