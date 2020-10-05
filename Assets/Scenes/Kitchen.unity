@@ -389,7 +389,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
-  eventManager: {fileID: 0}
 --- !u!1 &380259612
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,7 +808,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
-  eventManager: {fileID: 0}
 --- !u!1 &611254496
 GameObject:
   m_ObjectHideFlags: 0
@@ -2105,9 +2103,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebdec8188bfa3e740b2135ec3b440562, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventManager: {fileID: 0}
   sceneName: Flur
   characterPosition: {x: -5, y: 0.5, z: 0.5}
+  rotation: 0
 --- !u!1 &1848124231
 GameObject:
   m_ObjectHideFlags: 0
@@ -3359,7 +3357,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
-  eventManager: {fileID: 0}
 --- !u!114 &5968267921619111154
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -43,6 +43,6 @@ public class PlayerMovement : MonoBehaviour
     public void WarpToPosition(Vector3 position, float rotation)
     {
         agent.Warp(position);
-        transform.rotation = transform.rotation * Quaternion.AngleAxis(rotation, Vector3.up);  
+        transform.rotation = Quaternion.AngleAxis(rotation, Vector3.up);  
     }
 }
