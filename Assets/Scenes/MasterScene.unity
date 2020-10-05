@@ -106,7 +106,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.33
+    agentRadius: 0.18
     agentHeight: 0.76
     agentSlope: 45
     agentClimb: 0.4
@@ -114,13 +114,13 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.11000001
+    cellSize: 0.060000002
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 4a603e9320738404faca0c01359a9c85, type: 2}
+  m_NavMeshData: {fileID: 0}
 --- !u!1 &170152655
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,17 +219,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
-      - m_Target: {fileID: 170152656}
-        m_MethodName: ResetCursor
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
   moveObjectEvent:
     m_PersistentCalls:
@@ -283,6 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 983ba30432a2bdd458c904c0c5306da3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMovement: {fileID: 7664722647875769934}
 --- !u!1 &368243654
 GameObject:
   m_ObjectHideFlags: 0
@@ -1558,15 +1548,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7664722647875769932}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -17.42, y: 3.39, z: -3.89}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.42, y: 3.55, z: 3.67}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_Children:
   - {fileID: 821363242076650020}
   - {fileID: 167618814104485404}
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6652944398966554732
 GameObject:
   m_ObjectHideFlags: 0
@@ -1797,6 +1787,8 @@ GameObject:
   - component: {fileID: 7664722647875769935}
   - component: {fileID: 7664722647875769934}
   - component: {fileID: 7664722647875769937}
+  - component: {fileID: 7664722647875769936}
+  - component: {fileID: 7664722647875769938}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -1857,6 +1849,20 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &7664722647875769936
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7664722647875769932}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.02
+  m_Height: 4.46
+  m_Direction: 2
+  m_Center: {x: 0.0000003973643, y: 2.4399998, z: 0}
 --- !u!114 &7664722647875769937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1869,6 +1875,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4a079ee57c00848aec38ce8aead0f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &7664722647875769938
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7664722647875769932}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &7669515414785588096
 Transform:
   m_ObjectHideFlags: 0

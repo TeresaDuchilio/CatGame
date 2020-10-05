@@ -15,11 +15,16 @@ public class MoveSceneObject : MonoBehaviour, IClickableObject
 
     public void LeftClick()
     {
-        eventManager.InvoceSceneChange(sceneName, characterPosition, rotation);
+        //nothing
     }
 
     public void RightClick()
     {
-        throw new System.NotImplementedException();
+        //say something?
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        eventManager.InvoceSceneChange(sceneName, characterPosition, rotation);
     }
 }

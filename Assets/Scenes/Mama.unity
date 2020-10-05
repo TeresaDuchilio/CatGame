@@ -207,7 +207,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78762620}
   m_LocalRotation: {x: 0.0067876065, y: 0.7070742, z: -0.0067876065, w: 0.7070742}
-  m_LocalPosition: {x: -18.69, y: 4.03, z: -4.07}
+  m_LocalPosition: {x: -18.71, y: 4.03, z: -4.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 255301346}
@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 255301347}
   m_Layer: 0
   m_Name: DoorTrigger
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -335,7 +335,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 255301345}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.05, y: -0, z: 0.34}
+  m_LocalPosition: {x: 0.05, y: 0, z: 0.2}
   m_LocalScale: {x: 1.8, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 78762622}
@@ -405,7 +405,7 @@ GameObject:
   - component: {fileID: 932306956}
   m_Layer: 0
   m_Name: DoorTrigger
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -437,7 +437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Durchgangszimmer
-  characterPosition: {x: -9.78, y: 3.4, z: 0.44}
+  characterPosition: {x: -9.78, y: 3.4, z: 1.04}
   rotation: 0
 --- !u!114 &932306957
 MonoBehaviour:

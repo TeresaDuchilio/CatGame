@@ -145,7 +145,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28561134}
   m_LocalRotation: {x: 0.0067876065, y: 0.7070742, z: -0.0067876065, w: 0.7070742}
-  m_LocalPosition: {x: -19.11, y: 4.63, z: -4.07}
+  m_LocalPosition: {x: -19.13, y: 3.81, z: -4.07}
   m_LocalScale: {x: 1, y: 1.79, z: 1}
   m_Children:
   - {fileID: 1987419432}
@@ -450,7 +450,7 @@ GameObject:
   - component: {fileID: 1987419433}
   m_Layer: 0
   m_Name: DoorTrigger
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

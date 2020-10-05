@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - MasterObject
+  - Door
   layers:
   - Default
   - TransparentFX

@@ -106,7 +106,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 0.37
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
@@ -114,7 +114,7 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.123333335
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -144,14 +144,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 346909809}
-  m_LocalRotation: {x: 0.0067876065, y: 0.7070742, z: -0.0067876065, w: 0.7070742}
-  m_LocalPosition: {x: -12.23, y: 2.91, z: 7.06}
+  m_LocalRotation: {x: 0.007563698, y: 0.61570185, z: -0.005910471, w: 0.7879208}
+  m_LocalPosition: {x: -12.35, y: 2.91, z: 6.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2137095793}
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 1.1, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 1.1, y: 76.01, z: 0}
 --- !u!1001 &426729072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -786,7 +786,7 @@ GameObject:
   - component: {fileID: 2137095794}
   m_Layer: 0
   m_Name: DoorTrigger
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -106,21 +106,21 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.37
-    agentHeight: 0.4
+    agentRadius: 0.22
+    agentHeight: 0.94
     agentSlope: 45
-    agentClimb: 0.4
+    agentClimb: 0.87
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.123333335
+    cellSize: 0.07333333
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 4a603e9320738404faca0c01359a9c85, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: e2b14a21719fe05459eb0a9162587a1e, type: 2}
 --- !u!1 &134422379 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3239273863981769791, guid: 59233ce7713ad9f43a4adef4d0ba3097,
@@ -226,7 +226,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 207536128}
   m_LocalRotation: {x: -0.000008376208, y: -0.99995357, z: 0.009599121, w: -0.00087256107}
-  m_LocalPosition: {x: -10.88, y: 2.64, z: 7.43}
+  m_LocalPosition: {x: -10.69, y: 2.64, z: 7.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1329827362}
@@ -376,7 +376,12 @@ PrefabInstance:
     - target: {fileID: -5526598443809271051, guid: 59233ce7713ad9f43a4adef4d0ba3097,
         type: 3}
       propertyPath: m_NavMeshLayer
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5526598443809271051, guid: 59233ce7713ad9f43a4adef4d0ba3097,
+        type: 3}
+      propertyPath: m_TagString
+      value: Door
       objectReference: {fileID: 0}
     - target: {fileID: -4399390135416137635, guid: 59233ce7713ad9f43a4adef4d0ba3097,
         type: 3}
@@ -495,7 +500,7 @@ GameObject:
   - component: {fileID: 780306181}
   m_Layer: 0
   m_Name: DoorTrigger
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -508,7 +513,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 780306179}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.13}
+  m_LocalPosition: {x: 0, y: 0.38, z: 1}
   m_LocalScale: {x: 1.8, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2022743115}
@@ -527,7 +532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Flur
-  characterPosition: {x: -3.88, y: 0.5, z: 3.17}
+  characterPosition: {x: -3.88, y: 0.5, z: 2.85}
   rotation: 180
 --- !u!114 &780306182
 MonoBehaviour:
@@ -553,7 +558,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: 1, z: 1.57}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &780306184
 MeshFilter:
@@ -661,7 +666,7 @@ GameObject:
   - component: {fileID: 1269475053}
   m_Layer: 0
   m_Name: DoorTrigger
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -674,7 +679,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269475051}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.14, z: 1.65}
+  m_LocalPosition: {x: -0, y: 0.53, z: 1.58}
   m_LocalScale: {x: 1.8, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 367965635}
@@ -693,7 +698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Durchgangszimmer
-  characterPosition: {x: -8.88, y: 3.53, z: 4.07}
+  characterPosition: {x: -8.88, y: 3.53, z: 3.67}
   rotation: 180
 --- !u!114 &1269475054
 MonoBehaviour:
@@ -744,7 +749,7 @@ GameObject:
   - component: {fileID: 1329827363}
   m_Layer: 0
   m_Name: DoorTrigger
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -757,7 +762,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1329827361}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.09, y: -0, z: -0.06}
+  m_LocalPosition: {x: -0.29, y: -0, z: -0.06}
   m_LocalScale: {x: 1.8, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 207536130}
@@ -776,7 +781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Colin
-  characterPosition: {x: -11.58, y: 2.23, z: 8.26}
+  characterPosition: {x: -12.11, y: 2.23, z: 8.26}
   rotation: -45
 --- !u!114 &1329827364
 MonoBehaviour:
