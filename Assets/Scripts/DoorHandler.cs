@@ -12,11 +12,6 @@ public class DoorHandler : MonoBehaviour
         eventManager = GameObject.FindWithTag("MasterObject").GetComponent<EventManager>();
     }
 
-    public bool MoveToDoor(Vector3 doorPosition)
-    {
-        return playerMovement.MoveToPosition(doorPosition);
-    }
-
     public void ChangeSceneTo(string name)
     {
         SceneManager.LoadScene(name);

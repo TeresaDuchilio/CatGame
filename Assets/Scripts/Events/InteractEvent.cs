@@ -1,4 +1,4 @@
 ﻿using UnityEngine.Events;
 
 [System.Serializable]
-public class InteractEvent : UnityEvent<string> { }
+public class InteractEvent : UnityEvent<int> { }

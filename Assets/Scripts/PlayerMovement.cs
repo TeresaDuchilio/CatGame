@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices.WindowsRuntime;
+﻿using System.Collections;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -6,10 +7,13 @@ using UnityEngine.AI;
 public class PlayerMovement : MonoBehaviour
 {
     NavMeshAgent agent;
+    IClickableObject selectedObject;
+    bool interact;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        interact = false;
     }
 
     private void Update()
@@ -31,12 +35,14 @@ public class PlayerMovement : MonoBehaviour
                             destination = meshHit.position;
                         }
                     }
+                    interact = false;
                     agent.SetDestination(destination);
                 }
                 else {
                     var interaction = hit.transform.GetComponent<IClickableObject>();
                     if (interaction != null)
                     {
+                        interact = false;
                         interaction.LeftClick();
                     }
                 }
@@ -48,33 +54,42 @@ public class PlayerMovement : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
-                var interaction = hit.transform.GetComponent<IClickableObject>();
-                if (interaction != null)
+                selectedObject = hit.transform.GetComponent<IClickableObject>();
+
+                NavMeshHit meshHit;
+                if (NavMesh.SamplePosition(hit.transform.position, out meshHit, 5.0f, NavMesh.AllAreas))
                 {
-                    interaction.RightClick();
+                    interact = true;
+                    agent.SetDestination(meshHit.position);
                 }
             }
         }
-    }
 
-    //Returns true once agent reaches position
-    public bool MoveToPosition(Vector3 position)
-    {
-        agent.SetDestination(position);
-        //position = agent.destination;
-
-        while(agent.transform.position != position)
+        if (interact && IsPathComplete())
         {
-            if(agent.destination != position)
-            {
-                return false;
-            }
+            selectedObject.RightClick();
+            interact = false;
         }
-        return true;
     }
+
     public void WarpToPosition(Vector3 position, float rotation)
     {
         agent.Warp(position);
         transform.rotation = Quaternion.AngleAxis(rotation, Vector3.up);  
+    }
+
+    bool IsPathComplete()
+    {
+        if (Vector3.Distance(transform.position, agent.destination) <= 1f)
+        {
+            if (agent.remainingDistance <= agent.stoppingDistance)
+            {
+                if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }

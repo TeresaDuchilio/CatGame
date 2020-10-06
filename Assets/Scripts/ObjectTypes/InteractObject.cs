@@ -1,28 +1,31 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 public class InteractObject : MonoBehaviour, IClickableObject
 {
-    public Text text;
+    public string inspectText;
+    public int itemId;
+
     EventManager eventManager;
+    bool hasItem;
 
     void Start()
     {
         eventManager = GameObject.FindWithTag("MasterObject").GetComponent<EventManager>();
+        hasItem = itemId != 0;
     }
 
     public void LeftClick()
     {
-        PutText("Inspect");
+        eventManager.InvokeLookAt(inspectText);
     }
 
     public void RightClick()
     {
         Debug.Log("Interact");
-    }
-
-    void PutText(string text)
-    {
-        eventManager.InvokeLookAt(text);
+        if (hasItem)
+        {
+            eventManager.InvokeInteract(itemId);
+            hasItem = false;
+        }
     }
 }

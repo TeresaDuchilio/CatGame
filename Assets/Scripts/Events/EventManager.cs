@@ -12,9 +12,9 @@ public class EventManager : MonoBehaviour
         lookAtEvent.Invoke(text);
     }
 
-    public void InvokeInteract(string text)
+    public void InvokeInteract(int itemId)
     {
-        lookAtEvent.Invoke(text);
+        interactEvent.Invoke(itemId);
     }
 
     public void InvoceSceneChange(string sceneName, Vector3 characterPosition, float rotation)
