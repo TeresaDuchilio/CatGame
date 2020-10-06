@@ -5,6 +5,7 @@ using System.Linq;
 public class Inventory : MonoBehaviour
 {
     public List<Item> Items;
+    public List<ItemSlot> itemSlots;
     ItemStore ItemStore;
 
     void Start()
@@ -28,6 +29,19 @@ public class Inventory : MonoBehaviour
         if (itemToRemove != default(Item))
         {
             Items.Remove(itemToRemove);
+        }
+    }
+
+    public bool HasItem(int itemId)
+    {
+        var item = ItemStore.GetById(itemId);
+        if (item != default(Item))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }
