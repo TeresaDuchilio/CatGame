@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -226, y: -150}
+  m_AnchoredPosition: {x: -1651, y: -150}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &54566354
@@ -209,6 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 588928206}
+  newPositionFound: 0
 --- !u!225 &54566357
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -271,6 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c4eed7d463ab4945a7eeac35cd6b294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasItem: 0
 --- !u!114 &97464317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,6 +323,7 @@ GameObject:
   - component: {fileID: 170152659}
   - component: {fileID: 170152657}
   - component: {fileID: 170152661}
+  - component: {fileID: 170152662}
   m_Layer: 0
   m_Name: MasterObject
   m_TagString: MasterObject
@@ -472,6 +475,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07dfb44a667c4cf408d77a272ecbbb77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Items: []
+  itemSlots:
+  - {fileID: 1153257762}
+  - {fileID: 1227907592}
+  - {fileID: 97464316}
+  - {fileID: 1918998113}
+  ItemStore: {fileID: 170152662}
+--- !u!114 &170152662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170152655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2905ccdcf0b6d747be4487c437ea491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Items:
+  - Id: 1
+    name: Test
+    UIElement: {fileID: 54566352}
 --- !u!1 &368243654
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,6 +857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c4eed7d463ab4945a7eeac35cd6b294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasItem: 0
 --- !u!1 &1227907590
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,6 +908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c4eed7d463ab4945a7eeac35cd6b294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasItem: 0
 --- !u!114 &1227907593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -967,6 +995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c4eed7d463ab4945a7eeac35cd6b294, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasItem: 0
 --- !u!114 &1918998114
 MonoBehaviour:
   m_ObjectHideFlags: 0

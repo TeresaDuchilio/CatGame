@@ -6,7 +6,6 @@ public class EventManager : MonoBehaviour
     public InteractEvent interactEvent;
     public SceneChangeEvent sceneChangeEvent;
     public MoveObjectEvent moveObjectEvent;
-    public AddToInventoryEvent addToInventoryEvent;
 
     public void InvokeLookAt(string text)
     {

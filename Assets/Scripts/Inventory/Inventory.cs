@@ -6,12 +6,11 @@ public class Inventory : MonoBehaviour
 {
     public List<Item> Items;
     public List<ItemSlot> itemSlots;
-    ItemStore ItemStore;
+    public ItemStore ItemStore;
 
     void Start()
     {
         Items = new List<Item>();
-        ItemStore = ScriptableObject.CreateInstance<ItemStore>();
     }
 
     public void AddItem(int itemId)
@@ -21,6 +20,9 @@ public class Inventory : MonoBehaviour
         {
             Items.Add(item);
         }
+
+        var freeSlot = itemSlots.Where(x => !x.hasItem).FirstOrDefault();
+        freeSlot.AddToSlot(item.UIElement);
     }
 
     public void RemoveItem(int itemId)

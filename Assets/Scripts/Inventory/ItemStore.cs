@@ -2,20 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 
-public class ItemStore : ScriptableObject
+public class ItemStore : MonoBehaviour
 {
-    List<Item> Items;
-
-    void Awake()
-    {
-        Items = new List<Item>();
-        InitializeItems();
-    }
-
-    void InitializeItems()
-    {
-        Items.Add(new Item(1, "testItem", null));
-    }
+    
+    public List<Item> Items;
 
     public Item GetById(int Id)
     {
