@@ -390,6 +390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inspectText: 
   itemId: 0
+  interactItemId: 0
 --- !u!1 &380259612
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,6 +811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inspectText: 
   itemId: 0
+  interactItemId: 0
 --- !u!1 &611254496
 GameObject:
   m_ObjectHideFlags: 0
@@ -1567,6 +1569,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1097098112 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: a5058d841b2dd164d9000d175380f377,
+    type: 3}
+  m_PrefabInstance: {fileID: 1677299019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1097098116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097098112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b44c9450dd7b5e499d60671c33972af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inspectText: kalte kaelte
+  itemId: 0
+  interactItemId: 1
 --- !u!1001 &1255176442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3294,6 +3317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inspectText: Wow a shelf
   itemId: 1
+  interactItemId: 1
 --- !u!114 &5968267921619111154
 MonoBehaviour:
   m_ObjectHideFlags: 0

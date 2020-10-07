@@ -33,6 +33,7 @@ public class Inventory : MonoBehaviour
         {
             Items.Remove(itemToRemove);
             RemoveFromSlot(GetSlotByPosition(item.transform.position));
+            item.SetActive(false);
         }
     }
 

@@ -56,11 +56,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 selectedObject = hit.transform.GetComponent<IClickableObject>();
 
-                NavMeshHit meshHit;
-                if (NavMesh.SamplePosition(hit.transform.position, out meshHit, 5.0f, NavMesh.AllAreas))
+                if (selectedObject != null)
                 {
-                    interact = true;
-                    agent.SetDestination(meshHit.position);
+                    NavMeshHit meshHit;
+                    if (NavMesh.SamplePosition(hit.transform.position, out meshHit, 5.0f, NavMesh.AllAreas))
+                    {
+                        interact = true;
+                        agent.SetDestination(meshHit.position);
+                    }
                 }
             }
         }
