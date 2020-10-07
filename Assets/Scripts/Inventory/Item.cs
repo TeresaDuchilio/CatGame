@@ -1,9 +1,8 @@
 ﻿using UnityEngine;
 
 [System.Serializable]
-public class Item
+public class Item : MonoBehaviour
 {
     public int Id;
     public string name;
-    public GameObject UIElement;
 }

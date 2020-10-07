@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 54566354}
   - component: {fileID: 54566356}
   - component: {fileID: 54566357}
+  - component: {fileID: 54566358}
   m_Layer: 5
   m_Name: TestItem
   m_TagString: Untagged
@@ -210,6 +211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 588928206}
   newPositionFound: 0
+  Inventory: {fileID: 170152661}
 --- !u!225 &54566357
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -222,6 +224,20 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &54566358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54566352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0d0c6bae6fd5ef43b69ec24ab6fe2fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: 1
+  name: test
 --- !u!1 &97464314
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,6 +289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasItem: 0
+  attachedItem: {fileID: 0}
 --- !u!114 &97464317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,9 +512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Items:
-  - Id: 1
-    name: Test
-    UIElement: {fileID: 54566352}
+  - {fileID: 54566358}
 --- !u!1 &368243654
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,6 +873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasItem: 0
+  attachedItem: {fileID: 0}
 --- !u!1 &1227907590
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,6 +925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasItem: 0
+  attachedItem: {fileID: 0}
 --- !u!114 &1227907593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -996,6 +1013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasItem: 0
+  attachedItem: {fileID: 0}
 --- !u!114 &1918998114
 MonoBehaviour:
   m_ObjectHideFlags: 0

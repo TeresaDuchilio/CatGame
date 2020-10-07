@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
+[System.Serializable]
 public class Inventory : MonoBehaviour
 {
     public List<Item> Items;
@@ -22,16 +23,27 @@ public class Inventory : MonoBehaviour
         }
 
         var freeSlot = itemSlots.Where(x => !x.hasItem).FirstOrDefault();
-        freeSlot.AddToSlot(item.UIElement);
+        freeSlot.AddToSlot(item.gameObject);
     }
 
-    public void RemoveItem(int itemId)
+    public void RemoveItem(GameObject item)
     {
-        var itemToRemove = Items.SingleOrDefault(s => s.Id == itemId);
+        var itemToRemove = Items.SingleOrDefault(x => x.gameObject == item);
         if (itemToRemove != default(Item))
         {
             Items.Remove(itemToRemove);
+            RemoveFromSlot(GetSlotByPosition(item.transform.position));
         }
+    }
+
+    public void RemoveFromSlot(ItemSlot slot)
+    {
+        slot.RemoveItem();
+    }
+
+    public ItemSlot GetSlotByPosition(Vector2 position)
+    {
+        return itemSlots.Where(x => x.GetComponent<RectTransform>().anchoredPosition == position).FirstOrDefault();
     }
 
     public bool HasItem(int itemId)

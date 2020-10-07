@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
+[System.Serializable]
 public class ItemSlot : MonoBehaviour, IDropHandler
 {
     public bool hasItem;
+    public GameObject attachedItem;
     Vector2 slotPosition;
 
     public void Awake()
@@ -18,8 +20,9 @@ public class ItemSlot : MonoBehaviour, IDropHandler
         if (eventData.pointerDrag != null && !hasItem)
         {
             hasItem = true;
+            attachedItem = eventData.pointerDrag;
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = slotPosition;
-            eventData.pointerDrag.GetComponent<DragDrop>().newPositionFound = true;
+            eventData.pointerDrag.GetComponent<DragDropItem>().newPositionFound = true;
         }
     }
 
@@ -37,5 +40,6 @@ public class ItemSlot : MonoBehaviour, IDropHandler
     public void RemoveItem()
     {
         hasItem = false;
+        attachedItem = null;
     }
 }

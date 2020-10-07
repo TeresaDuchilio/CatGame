@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler {
+public class DragDropItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler {
 
     [SerializeField] private Canvas canvas;
 
     public bool newPositionFound;
+    public Inventory Inventory;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
 
@@ -26,7 +27,6 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     }
 
     public void OnDrag(PointerEventData eventData) {
-        //Debug.Log("OnDrag");
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
@@ -38,6 +38,11 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         {
             rectTransform.anchoredPosition = startPosition;
             newPositionFound = false;
+        }
+        else
+        {
+            var startSlot = Inventory.GetSlotByPosition(startPosition);
+            Inventory.RemoveFromSlot(startSlot);
         }
     }
 
