@@ -33,6 +33,7 @@ public class ItemSlot : MonoBehaviour, IDropHandler
         if (!hasItem && itemTransform != null)
         {
             hasItem = true;
+            attachedItem = item;
             itemTransform.anchoredPosition = slotPosition;
         }
     }

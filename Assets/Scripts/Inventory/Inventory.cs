@@ -32,7 +32,7 @@ public class Inventory : MonoBehaviour
         if (itemToRemove != default(Item))
         {
             Items.Remove(itemToRemove);
-            RemoveFromSlot(GetSlotByPosition(item.transform.position));
+            RemoveFromSlot(GetSlotByItem(item));
             item.SetActive(false);
         }
     }
@@ -42,6 +42,10 @@ public class Inventory : MonoBehaviour
         slot.RemoveItem();
     }
 
+    public ItemSlot GetSlotByItem(GameObject item)
+    {
+        return itemSlots.Where(x => x.attachedItem == item).FirstOrDefault(); 
+    }
     public ItemSlot GetSlotByPosition(Vector2 position)
     {
         return itemSlots.Where(x => x.GetComponent<RectTransform>().anchoredPosition == position).FirstOrDefault();
