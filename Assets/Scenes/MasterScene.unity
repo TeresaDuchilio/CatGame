@@ -238,6 +238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: 1
   name: test
+  slotIndex: 0
 --- !u!1 &97464314
 GameObject:
   m_ObjectHideFlags: 0
