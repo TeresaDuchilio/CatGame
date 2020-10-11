@@ -1,17 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
-[System.Serializable]
+[Serializable]
 public class Inventory : MonoBehaviour
 {
     public List<Item> Items;
     public List<ItemSlot> itemSlots;
     public ItemStore ItemStore;
 
+    GameState gameState;
+
     void Start()
     {
         Items = new List<Item>();
+        gameState = GameState.Instance;
+
+        if(gameState.Inventory != null)
+        {
+            Items = gameState.Inventory.Items;
+            itemSlots = gameState.Inventory.itemSlots;
+        }
+        else
+        {
+            gameState.Inventory = this;
+        }
     }
 
     public void AddItem(int itemId)
@@ -20,10 +34,10 @@ public class Inventory : MonoBehaviour
         if (item != default(Item))
         {
             Items.Add(item);
-        }
-
-        var freeSlot = itemSlots.Where(x => !x.hasItem).FirstOrDefault();
-        freeSlot.AddToSlot(item.gameObject);
+            var freeSlot = itemSlots.Where(x => !x.hasItem).FirstOrDefault();
+            freeSlot.AddToSlot(item.gameObject);
+            UpdateGameState();
+        }        
     }
 
     public void RemoveItem(GameObject item)
@@ -34,12 +48,14 @@ public class Inventory : MonoBehaviour
             Items.Remove(itemToRemove);
             RemoveFromSlot(GetSlotByItem(item));
             item.SetActive(false);
+            UpdateGameState();
         }
     }
 
     public void RemoveFromSlot(ItemSlot slot)
     {
         slot.RemoveItem();
+        UpdateGameState();
     }
 
     public ItemSlot GetSlotByItem(GameObject item)
@@ -62,5 +78,11 @@ public class Inventory : MonoBehaviour
         {
             return false;
         }
+    }
+
+    void UpdateGameState()
+    {
+        gameState.Inventory.Items = Items;
+        gameState.Inventory.itemSlots = itemSlots;
     }
 }

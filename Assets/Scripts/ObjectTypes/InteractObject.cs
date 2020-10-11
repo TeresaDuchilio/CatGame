@@ -1,22 +1,40 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Linq;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
+[Serializable]
 public class InteractObject : MonoBehaviour, IClickableObject, IDropHandler
 {
     public string inspectText;
     public int itemId;
-
+    public bool hasItem;
+    public bool interactable;
     public int interactItemId;
 
     EventManager eventManager;
-    bool hasItem;
-    bool interactable;
+    GameState gameState;
 
     void Start()
     {
         eventManager = GameObject.FindWithTag("MasterObject").GetComponent<EventManager>();
+        gameState = GameState.Instance;
         hasItem = itemId != 0;
         interactable = true;
+
+        var thisObject = gameState.Objects.Where(x => x.gameObject == this.gameObject).FirstOrDefault();
+
+        if (thisObject != null)
+        {
+            itemId = thisObject.itemId;
+            interactItemId = thisObject.interactItemId;
+            hasItem = thisObject.hasItem;
+            interactable = thisObject.interactable;
+        }
+        else
+        {
+            gameState.Objects.Add(this);
+        }
     }
 
     public void LeftClick()
@@ -32,6 +50,7 @@ public class InteractObject : MonoBehaviour, IClickableObject, IDropHandler
             eventManager.InvokeInteract(itemId);
             hasItem = false;
         }
+        gameState.UpdateObject(this);
     }
 
     public void OnDrop(PointerEventData eventData)
@@ -43,5 +62,6 @@ public class InteractObject : MonoBehaviour, IClickableObject, IDropHandler
             interactable = false;
             eventManager.InvokeRemoveFromInventory(item.gameObject);
         }
+        gameState.UpdateObject(this);
     }
 }

@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
+
+[Serializable]
+public sealed class GameState
+{
+    public List<InteractObject> Objects { get; set; }
+    public Inventory Inventory { get; set; }
+    public string Scene { get; set; }
+    public Vector3 AgentPosition { get; set; }
+    public float AgentRotation { get; set; }
+
+    private GameState()
+    {
+    }
+    private static readonly Lazy<GameState> lazy = new Lazy<GameState>(() => new GameState());
+    public static GameState Instance
+    {
+        get
+        {
+            return lazy.Value;
+        }
+    }
+
+    public void UpdateObject(InteractObject interactObject)
+    {
+        foreach (InteractObject obj in Objects)
+        {
+            if (obj.gameObject == interactObject.gameObject)
+            {
+                obj.itemId = interactObject.itemId;
+                obj.interactItemId = interactObject.interactItemId;
+                obj.hasItem = interactObject.hasItem;
+                obj.interactable = interactObject.interactable;
+                break;
+            }
+        }
+    }
+}
