@@ -13,8 +13,11 @@ public sealed class GameState
 
     private GameState()
     {
+        Objects = new List<InteractObject>();
     }
+
     private static readonly Lazy<GameState> lazy = new Lazy<GameState>(() => new GameState());
+
     public static GameState Instance
     {
         get
@@ -36,5 +39,14 @@ public sealed class GameState
                 break;
             }
         }
+    }
+
+    public void SetGameState(GameState state)
+    {
+        this.AgentPosition = state.AgentPosition;
+        this.AgentRotation = state.AgentRotation;
+        this.Inventory = state.Inventory;
+        this.Objects = state.Objects;
+        this.Scene = state.Scene;
     }
 }
