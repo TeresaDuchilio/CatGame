@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EventManager : MonoBehaviour
 {
@@ -27,6 +29,17 @@ public class EventManager : MonoBehaviour
     public void InvoceSceneChange(string sceneName, Vector3 characterPosition, float rotation)
     {
         sceneChangeEvent.Invoke(sceneName);
+
+        if (SceneManager.GetActiveScene().name != sceneName)
+        {
+            StartCoroutine("WaitForSceneLoad");
+        }
+
         moveObjectEvent.Invoke(characterPosition, rotation);
+    }
+
+    IEnumerator WaitForSceneLoad()
+    {
+        yield return 0;    //Wait one frame
     }
 }

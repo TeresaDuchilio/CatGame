@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class StartGame : MonoBehaviour
 {
     EventManager eventManager;
     public string startScene;
     public Vector3 startPosition;
-    float startRotation;
+    public float startRotation;
 
     void Start()
     {

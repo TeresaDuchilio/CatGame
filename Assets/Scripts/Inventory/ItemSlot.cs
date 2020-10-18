@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
-[System.Serializable]
+[Serializable]
 public class ItemSlot : MonoBehaviour, IDropHandler
 {
     public bool hasItem;

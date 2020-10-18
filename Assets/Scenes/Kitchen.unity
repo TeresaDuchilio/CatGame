@@ -390,6 +390,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inspectText: 
   itemId: 0
+  hasItem: 0
+  interactable: 0
   interactItemId: 0
 --- !u!1 &380259612
 GameObject:
@@ -811,6 +813,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inspectText: 
   itemId: 0
+  hasItem: 0
+  interactable: 0
   interactItemId: 0
 --- !u!1 &611254496
 GameObject:
@@ -1619,6 +1623,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inspectText: kalte kaelte
   itemId: 0
+  hasItem: 0
+  interactable: 0
   interactItemId: 1
 --- !u!114 &1097098117
 MonoBehaviour:
@@ -3360,6 +3366,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inspectText: Wow a shelf
   itemId: 1
+  hasItem: 0
+  interactable: 0
   interactItemId: 1
 --- !u!114 &5968267921619111154
 MonoBehaviour:
