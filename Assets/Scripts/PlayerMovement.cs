@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.AI;
-
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,10 +10,16 @@ public class PlayerMovement : MonoBehaviour
     IClickableObject selectedObject;
     bool interact;
 
+    bool warping;
+    Vector3 warpPosition;
+    float warpRotation;
+    string currentScene;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         interact = false;
+        warping = false;
     }
 
     private void Update()
@@ -73,12 +79,26 @@ public class PlayerMovement : MonoBehaviour
             selectedObject.RightClick();
             interact = false;
         }
+
+        if (warping)
+        {
+            if (SceneManager.GetActiveScene().name == currentScene)
+            {                
+                warping = false;
+                agent.enabled = false;
+                transform.position = warpPosition;
+                transform.rotation = Quaternion.AngleAxis(warpRotation, Vector3.up);
+                agent.enabled = true;
+            }
+        }
     }
 
-    public void WarpToPosition(Vector3 position, float rotation)
+    public void WarpToPosition(Vector3 position, float rotation, string scene)
     {
-        agent.Warp(position);
-        transform.rotation = Quaternion.AngleAxis(rotation, Vector3.up);  
+        warping = true;
+        warpPosition = position;
+        warpRotation = rotation;
+        currentScene = scene;
     }
 
     bool IsPathComplete()

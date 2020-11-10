@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 [Serializable]
 public class InteractObject : MonoBehaviour, IClickableObject, IDropHandler
 {
+    public int ID;
     public string inspectText;
     public int itemId;
     public bool hasItem;
@@ -22,7 +23,7 @@ public class InteractObject : MonoBehaviour, IClickableObject, IDropHandler
         hasItem = itemId != 0;
         interactable = true;
 
-        var thisObject = gameState.Objects.Where(x => x.gameObject == this.gameObject).FirstOrDefault();
+        var thisObject = gameState.Objects.Where(x => x.ID == this.ID).FirstOrDefault();
 
         if (thisObject != null)
         {

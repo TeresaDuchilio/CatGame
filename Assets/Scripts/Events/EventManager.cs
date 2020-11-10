@@ -29,17 +29,7 @@ public class EventManager : MonoBehaviour
     public void InvoceSceneChange(string sceneName, Vector3 characterPosition, float rotation)
     {
         sceneChangeEvent.Invoke(sceneName);
-
-        if (SceneManager.GetActiveScene().name != sceneName)
-        {
-            StartCoroutine("WaitForSceneLoad");
-        }
-
-        moveObjectEvent.Invoke(characterPosition, rotation);
+        moveObjectEvent.Invoke(characterPosition, rotation, sceneName);
     }
 
-    IEnumerator WaitForSceneLoad()
-    {
-        yield return 0;    //Wait one frame
-    }
 }

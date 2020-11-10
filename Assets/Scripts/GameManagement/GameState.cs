@@ -30,7 +30,7 @@ public sealed class GameState
     {
         foreach (InteractObject obj in Objects)
         {
-            if (obj.gameObject == interactObject.gameObject)
+            if (obj.ID == interactObject.ID)
             {
                 obj.itemId = interactObject.itemId;
                 obj.interactItemId = interactObject.interactItemId;
