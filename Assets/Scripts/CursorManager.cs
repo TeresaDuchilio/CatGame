@@ -20,7 +20,8 @@ public class CursorManager : MonoBehaviour {
         Arrow,
         LookAndInteract,
         Look,
-        MoveScene
+        MoveScene,
+        NPC
     }
 
     private void Awake() {

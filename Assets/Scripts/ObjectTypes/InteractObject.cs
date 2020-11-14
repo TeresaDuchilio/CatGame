@@ -12,6 +12,7 @@ public class InteractObject : MonoBehaviour, IClickableObject, IDropHandler
     public bool hasItem;
     public bool interactable;
     public int interactItemId;
+    public int gameFlowId;
 
     EventManager eventManager;
     GameState gameState;
@@ -62,6 +63,7 @@ public class InteractObject : MonoBehaviour, IClickableObject, IDropHandler
             Debug.Log("Do something with this item");
             interactable = false;
             eventManager.InvokeRemoveFromInventory(item.gameObject);
+            eventManager.InvokeGameFlowProgression(gameFlowId);
         }
         gameState.UpdateObject(this);
     }

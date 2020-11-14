@@ -6,6 +6,7 @@ public class EventManager : MonoBehaviour
 {
     public LookAtEvent lookAtEvent;
     public InteractEvent interactEvent;
+    public InteractEvent gameFlowEvent;
     public SceneChangeEvent sceneChangeEvent;
     public MoveObjectEvent moveObjectEvent;
     public RemoveFromInventoryEvent removeFromInventoryEvent;
@@ -32,4 +33,8 @@ public class EventManager : MonoBehaviour
         moveObjectEvent.Invoke(characterPosition, rotation, sceneName);
     }
 
+    public void InvokeGameFlowProgression(int gameStateId)
+    {
+        gameFlowEvent.Invoke(gameStateId);
+    }
 }
