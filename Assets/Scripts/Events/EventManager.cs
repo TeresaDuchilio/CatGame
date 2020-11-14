@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class EventManager : MonoBehaviour
@@ -10,6 +11,7 @@ public class EventManager : MonoBehaviour
     public SceneChangeEvent sceneChangeEvent;
     public MoveObjectEvent moveObjectEvent;
     public RemoveFromInventoryEvent removeFromInventoryEvent;
+    public UnityEvent resetCursorEvent;
 
     public void InvokeLookAt(string text)
     {
@@ -30,6 +32,7 @@ public class EventManager : MonoBehaviour
     public void InvoceSceneChange(string sceneName, Vector3 characterPosition, float rotation)
     {
         sceneChangeEvent.Invoke(sceneName);
+        resetCursorEvent.Invoke();
         moveObjectEvent.Invoke(characterPosition, rotation, sceneName);
     }
 

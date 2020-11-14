@@ -11,9 +11,12 @@ public sealed class GameState
     public Vector3 AgentPosition { get; set; }
     public float AgentRotation { get; set; }
 
+    public int gameFlowId;
+
     private GameState()
     {
         Objects = new List<InteractState>();
+        gameFlowId = -1;
     }
 
     private static readonly Lazy<GameState> lazy = new Lazy<GameState>(() => new GameState());
