@@ -1111,7 +1111,8 @@ MonoBehaviour:
   itemId: 0
   hasItem: 0
   interactable: 0
-  interactItemId: 2
+  interactItemId: 1
+  gameFlowId: 0
 --- !u!1 &1488318712
 GameObject:
   m_ObjectHideFlags: 0

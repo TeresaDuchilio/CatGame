@@ -3,7 +3,7 @@
 public class GameFlowManager : MonoBehaviour
 {
     public GameObject GeorgeFlurPicture;
-    public InteractObject TreatShelf;
+    public GameObject TreatShelf;
 
     EventManager eventManager;
 
@@ -22,7 +22,7 @@ public class GameFlowManager : MonoBehaviour
             case 1:
                 //give item, change text
                 eventManager.InvokeInteract(3);
-                TreatShelf.inspectText = "no treats here";
+                TreatShelf.GetComponent<InteractObject>().inspectText = "no treats here";
                 break;
             default:
                 break;

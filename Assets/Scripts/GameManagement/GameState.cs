@@ -5,7 +5,7 @@ using UnityEngine;
 [Serializable]
 public sealed class GameState
 {
-    public List<InteractObject> Objects { get; set; }
+    public List<InteractState> Objects { get; set; }
     public Inventory Inventory { get; set; }
     public string Scene { get; set; }
     public Vector3 AgentPosition { get; set; }
@@ -13,7 +13,7 @@ public sealed class GameState
 
     private GameState()
     {
-        Objects = new List<InteractObject>();
+        Objects = new List<InteractState>();
     }
 
     private static readonly Lazy<GameState> lazy = new Lazy<GameState>(() => new GameState());
@@ -28,7 +28,7 @@ public sealed class GameState
 
     public void UpdateObject(InteractObject interactObject)
     {
-        foreach (InteractObject obj in Objects)
+        foreach (InteractState obj in Objects)
         {
             if (obj.ID == interactObject.ID)
             {
@@ -49,4 +49,20 @@ public sealed class GameState
         this.Objects = state.Objects;
         this.Scene = state.Scene;
     }
+
+    public void AddInteractState(InteractObject interactObject)
+    {
+        InteractState state = new InteractState()
+        {
+            ID = interactObject.ID,
+            inspectText = interactObject.inspectText,
+            itemId = interactObject.itemId,
+            interactItemId = interactObject.interactItemId,
+            hasItem = interactObject.hasItem,
+            interactable = interactObject.interactable
+        };
+
+        Objects.Add(state);
+    }
+    
 }

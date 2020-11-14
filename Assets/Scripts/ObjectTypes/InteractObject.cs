@@ -35,7 +35,7 @@ public class InteractObject : MonoBehaviour, IClickableObject, IDropHandler
         }
         else
         {
-            gameState.Objects.Add(this);
+            gameState.AddInteractState(this);
         }
     }
 

@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b44c9450dd7b5e499d60671c33972af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 2
+  ID: 5
   inspectText: 
   itemId: 0
   hasItem: 0
@@ -813,8 +813,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b44c9450dd7b5e499d60671c33972af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 1
-  inspectText: 
+  ID: 4
+  inspectText: Treats here
   itemId: 0
   hasItem: 0
   interactable: 1
@@ -1625,7 +1625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b44c9450dd7b5e499d60671c33972af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 3
+  ID: 1
   inspectText: kalte kaelte
   itemId: 0
   hasItem: 0
@@ -2307,7 +2307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b44c9450dd7b5e499d60671c33972af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 6
+  ID: 2
   inspectText: '"bla bla"'
   itemId: 0
   hasItem: 0
@@ -3591,10 +3591,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b44c9450dd7b5e499d60671c33972af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 0
+  ID: 3
   inspectText: Wow a shelf
   itemId: 2
-  hasItem: 0
+  hasItem: 1
   interactable: 1
   interactItemId: 1
   gameFlowId: 0
