@@ -815,7 +815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 4
   inspectText: Treats here
-  itemId: 0
+  itemId: 1
   hasItem: 0
   interactable: 1
   interactItemId: 2
@@ -3593,7 +3593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 3
   inspectText: Wow a shelf
-  itemId: 2
+  itemId: 1
   hasItem: 1
   interactable: 1
   interactItemId: 1

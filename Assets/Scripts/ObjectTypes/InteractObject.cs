@@ -21,7 +21,7 @@ public class InteractObject : MonoBehaviour, IClickableObject, IDropHandler
     {
         eventManager = GameObject.FindWithTag("MasterObject").GetComponent<EventManager>();
         gameState = GameState.Instance;
-        hasItem = itemId != 0;
+        //hasItem = itemId != 0;
         interactable = true;
 
         var thisObject = gameState.Objects.Where(x => x.ID == this.ID).FirstOrDefault();

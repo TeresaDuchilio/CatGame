@@ -1133,7 +1133,7 @@ MonoBehaviour:
   itemId: 0
   hasItem: 0
   interactable: 1
-  interactItemId: 2
+  interactItemId: 1
   gameFlowId: 0
 --- !u!114 &1342312766
 MonoBehaviour:

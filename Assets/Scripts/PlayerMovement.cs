@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
                     agent.SetDestination(destination);
                 }
                 else {
-                    var interaction = hit.transform.GetComponent<IClickableObject>();
+                    var interaction = hit.transform.GetComponentInParent<IClickableObject>();
                     if (interaction != null)
                     {
                         interact = false;
@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
-                selectedObject = hit.transform.GetComponent<IClickableObject>();
+                selectedObject = hit.transform.GetComponentInParent<IClickableObject>();
 
                 if (selectedObject != null)
                 {
