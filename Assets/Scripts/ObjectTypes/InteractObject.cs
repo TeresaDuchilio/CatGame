@@ -8,6 +8,7 @@ public class InteractObject : MonoBehaviour, IClickableObject, IDropHandler
 {
     public int ID;
     public string inspectText;
+    public string inspectTextAfterInteract;
     public int itemId;
     public bool hasItem;
     public bool interactable;
@@ -62,6 +63,7 @@ public class InteractObject : MonoBehaviour, IClickableObject, IDropHandler
         {
             Debug.Log("Do something with this item");
             interactable = false;
+            inspectText = inspectTextAfterInteract;
             eventManager.InvokeRemoveFromInventory(item.gameObject);
             eventManager.InvokeGameFlowProgression(gameFlowId);
         }

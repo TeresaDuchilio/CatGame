@@ -29,8 +29,8 @@ public class GameFlowManager : MonoBehaviour
                 break;
             case 2:
                 //give item, change text
-                eventManager.InvokeInteract(3);
-                gameState.gameFlowId = 1;
+                eventManager.InvokeInteract(2);
+                gameState.gameFlowId = 2;
                 break;
             default:
                 break;
