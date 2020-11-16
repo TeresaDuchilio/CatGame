@@ -2317,7 +2317,7 @@ MonoBehaviour:
   hasItem: 0
   interactable: 1
   interactItemId: 2
-  gameFlowId: 0
+  gameFlowId: 3
 --- !u!114 &1809454165
 MonoBehaviour:
   m_ObjectHideFlags: 0

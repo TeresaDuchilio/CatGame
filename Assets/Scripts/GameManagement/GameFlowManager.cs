@@ -32,6 +32,10 @@ public class GameFlowManager : MonoBehaviour
                 eventManager.InvokeInteract(2);
                 gameState.gameFlowId = 2;
                 break;
+            case 3:
+                //animation
+                gameState.gameFlowId = 3;
+                break;
             default:
                 break;
         }
