@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class PickUpObject : MonoBehaviour, IClickableObject
 {
     public int ID;
-    public string inspectText;
+    public List<string> inspectText = new List<string>(0);
     public int itemId;
     public int gameFlowId;
 

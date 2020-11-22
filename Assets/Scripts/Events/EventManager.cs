@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -13,7 +14,7 @@ public class EventManager : MonoBehaviour
     public RemoveFromInventoryEvent removeFromInventoryEvent;
     public UnityEvent resetCursorEvent;
 
-    public void InvokeLookAt(string text)
+    public void InvokeLookAt(List<string> text)
     {
         lookAtEvent.Invoke(text);
     }

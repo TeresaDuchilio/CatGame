@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -7,8 +8,8 @@ using UnityEngine.EventSystems;
 public class InteractObject : MonoBehaviour, IClickableObject, IDropHandler
 {
     public int ID;
-    public string inspectText;
-    public string inspectTextAfterInteract;
+    public List<string> inspectText = new List<string>(0);
+    public List<string> inspectTextAfterInteract;
     public int itemId;
     public bool hasItem;
     public bool interactable;
@@ -22,7 +23,6 @@ public class InteractObject : MonoBehaviour, IClickableObject, IDropHandler
     {
         eventManager = GameObject.FindWithTag("MasterObject").GetComponent<EventManager>();
         gameState = GameState.Instance;
-        //hasItem = itemId != 0;
         interactable = true;
 
         var thisObject = gameState.Objects.Where(x => x.ID == this.ID).FirstOrDefault();

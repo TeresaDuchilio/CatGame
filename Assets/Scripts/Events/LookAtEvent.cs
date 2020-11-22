@@ -1,4 +1,5 @@
-﻿using UnityEngine.Events;
+﻿using System.Collections.Generic;
+using UnityEngine.Events;
 
 [System.Serializable]
-public class LookAtEvent : UnityEvent<string> { }
+public class LookAtEvent : UnityEvent<List<string>> { }

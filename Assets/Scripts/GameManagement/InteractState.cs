@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using UnityEditor;
+using System.Collections.Generic;
 
 public class InteractState 
 {
     public int ID;
-    public string inspectText;
+    public List<string> inspectText;
     public int itemId;
     public bool hasItem;
     public bool interactable;
