@@ -42,18 +42,25 @@ public class InteractObject : MonoBehaviour, IClickableObject, IDropHandler
 
     public void LeftClick()
     {
-        eventManager.InvokeLookAt(inspectText);
+        if (!MenuManager.Active)
+        {
+            eventManager.InvokeLookAt(inspectText);
+        }
     }
 
     public void RightClick()
     {
-        Debug.Log("Interact");
-        if (hasItem)
+        if (!MenuManager.Active)
         {
-            eventManager.InvokeInteract(itemId);
-            hasItem = false;
+
+            Debug.Log("Interact");
+            if (hasItem)
+            {
+                eventManager.InvokeInteract(itemId);
+                hasItem = false;
+            }
+            gameState.UpdateObject(this);
         }
-        gameState.UpdateObject(this);
     }
 
     public void OnDrop(PointerEventData eventData)

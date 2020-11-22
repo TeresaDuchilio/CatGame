@@ -24,51 +24,56 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (!MenuManager.Active)
         {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            if (Input.GetMouseButtonDown(0))
             {
-                if (hit.transform.tag == "Floor" || hit.transform.tag == "Door") {
-                    Vector3 destination = hit.point;
+                RaycastHit hit;
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+                {
+                    if (hit.transform.tag == "Floor" || hit.transform.tag == "Door")
+                    {
+                        Vector3 destination = hit.point;
 
-                    if(hit.transform.tag == "Door")
-                    {
-                        NavMeshHit meshHit;
-                        if (NavMesh.SamplePosition(destination, out meshHit, 5.0f, NavMesh.AllAreas))
+                        if (hit.transform.tag == "Door")
                         {
-                            destination = meshHit.position;
+                            NavMeshHit meshHit;
+                            if (NavMesh.SamplePosition(destination, out meshHit, 5.0f, NavMesh.AllAreas))
+                            {
+                                destination = meshHit.position;
+                            }
                         }
-                    }
-                    interact = false;
-                    agent.SetDestination(destination);
-                }
-                else {
-                    var interaction = hit.transform.GetComponentInParent<IClickableObject>();
-                    if (interaction != null)
-                    {
                         interact = false;
-                        interaction.LeftClick();
+                        agent.SetDestination(destination);
+                    }
+                    else
+                    {
+                        var interaction = hit.transform.GetComponentInParent<IClickableObject>();
+                        if (interaction != null)
+                        {
+                            interact = false;
+                            interaction.LeftClick();
+                        }
                     }
                 }
             }
-        }
-        else if (Input.GetMouseButtonDown(1))
-        {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            else if (Input.GetMouseButtonDown(1))
             {
-                selectedObject = hit.transform.GetComponentInParent<IClickableObject>();
-
-                if (selectedObject != null)
+                RaycastHit hit;
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, Mathf.Infinity))
                 {
-                    NavMeshHit meshHit;
-                    if (NavMesh.SamplePosition(hit.transform.position, out meshHit, 5.0f, NavMesh.AllAreas))
+                    selectedObject = hit.transform.GetComponentInParent<IClickableObject>();
+
+                    if (selectedObject != null)
                     {
-                        interact = true;
-                        agent.SetDestination(meshHit.position);
+                        NavMeshHit meshHit;
+                        if (NavMesh.SamplePosition(hit.transform.position, out meshHit, 5.0f, NavMesh.AllAreas))
+                        {
+                            interact = true;
+                            agent.SetDestination(meshHit.position);
+                        }
                     }
                 }
             }

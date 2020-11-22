@@ -16,13 +16,19 @@ public class PickUpObject : MonoBehaviour, IClickableObject
 
     public void LeftClick()
     {
-        eventManager.InvokeLookAt(inspectText);
+        if (!MenuManager.Active)
+        {
+            eventManager.InvokeLookAt(inspectText);
+        }
     }
 
     public void RightClick()
     {
-        eventManager.InvokeInteract(itemId);
-        eventManager.InvokeGameFlowProgression(gameFlowId);
-        gameObject.SetActive(false);
+        if (!MenuManager.Active)
+        {
+            eventManager.InvokeInteract(itemId);
+            eventManager.InvokeGameFlowProgression(gameFlowId);
+            gameObject.SetActive(false);
+        }
     }
 }

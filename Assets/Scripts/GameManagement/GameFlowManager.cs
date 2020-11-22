@@ -12,6 +12,7 @@ public class GameFlowManager : MonoBehaviour
 
     private void Start()
     {
+        MenuManager.Active = false;
         eventManager = GameObject.FindWithTag("MasterObject").GetComponent<EventManager>();
         gameState = GameState.Instance;
         cutscene = new Cutscene();
@@ -24,6 +25,7 @@ public class GameFlowManager : MonoBehaviour
             case 0:
                 GeorgeFlurPicture.SetActive(true);
                 GameObject.FindGameObjectsWithTag("GeorgeFlur").First().SetActive(false);
+                MenuManager.Active = true;
                 gameState.gameFlowId = 0;
                 break;
             case 1:

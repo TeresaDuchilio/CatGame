@@ -5,7 +5,10 @@ public class CursorObject : MonoBehaviour {
     [SerializeField] private CursorManager.CursorType cursorType;
 
     private void OnMouseEnter() {
-        CursorManager.Instance.SetActiveCursorType(cursorType);
+        if (!MenuManager.Active)
+        {
+            CursorManager.Instance.SetActiveCursorType(cursorType);
+        }
     }
 
     private void OnMouseExit() {
