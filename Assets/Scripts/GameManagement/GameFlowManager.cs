@@ -5,14 +5,16 @@ public class GameFlowManager : MonoBehaviour
 {
     public GameObject GeorgeFlurPicture;
 
+    GameObject FredKitchen;
     EventManager eventManager;
     GameState gameState;
-
+    Cutscene cutscene;
 
     private void Start()
     {
         eventManager = GameObject.FindWithTag("MasterObject").GetComponent<EventManager>();
         gameState = GameState.Instance;
+        cutscene = new Cutscene();
     }
 
     public void HandleGameEvent(int id)
@@ -34,6 +36,8 @@ public class GameFlowManager : MonoBehaviour
                 break;
             case 3:
                 //animation
+                FredKitchen = GameObject.FindGameObjectWithTag("FredKitchen");
+                cutscene.PlayWalkCutscene(FredKitchen, new Vector3(-6, 0.5f, -5.5f), new Vector3(-5.5f, 0.5f, -0.5f));
                 gameState.gameFlowId = 3;
                 break;
             default:

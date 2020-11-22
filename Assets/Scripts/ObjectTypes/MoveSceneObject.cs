@@ -26,9 +26,16 @@ public class MoveSceneObject : MonoBehaviour, IClickableObject
 
     private void OnTriggerEnter(Collider other)
     {
-        gameState.AgentPosition = characterPosition;
-        gameState.AgentRotation = rotation;
-        gameState.Scene = sceneName;
-        eventManager.InvoceSceneChange(sceneName, characterPosition, rotation);
+        if (other.gameObject.tag == "Player")
+        {
+            gameState.AgentPosition = characterPosition;
+            gameState.AgentRotation = rotation;
+            gameState.Scene = sceneName;
+            eventManager.InvoceSceneChange(sceneName, characterPosition, rotation);
+        }
+        else
+        {
+            Destroy(other.gameObject);
+        }
     }
 }

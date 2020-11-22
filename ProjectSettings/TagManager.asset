@@ -8,6 +8,7 @@ TagManager:
   - MasterObject
   - Door
   - GeorgeFlur
+  - FredKitchen
   layers:
   - Default
   - TransparentFX
