@@ -1129,7 +1129,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 7
-  inspectText: Du kommst hier nicht durch
+  inspectText:
+  - '"Du kommst hier nicht durch"'
+  inspectTextAfterInteract: []
   itemId: 0
   hasItem: 0
   interactable: 1

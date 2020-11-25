@@ -35,6 +35,7 @@ public sealed class GameState
         {
             if (obj.ID == interactObject.ID)
             {
+                obj.inspectText = interactObject.inspectText;
                 obj.itemId = interactObject.itemId;
                 obj.interactItemId = interactObject.interactItemId;
                 obj.hasItem = interactObject.hasItem;

@@ -255,7 +255,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 6
-  inspectText: wow closet
+  inspectText: []
+  inspectTextAfterInteract: []
   itemId: 4
   hasItem: 1
   interactable: 1
@@ -499,7 +500,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 0
-  inspectText: wow stock
+  inspectText:
+  - Ein Stock
   itemId: 4
   gameFlowId: 1
 --- !u!65 &1149214633

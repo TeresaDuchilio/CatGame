@@ -33,6 +33,7 @@ public class InteractObject : MonoBehaviour, IClickableObject, IDropHandler
             interactItemId = thisObject.interactItemId;
             hasItem = thisObject.hasItem;
             interactable = thisObject.interactable;
+            inspectText = thisObject.inspectText;
         }
         else
         {
@@ -58,6 +59,7 @@ public class InteractObject : MonoBehaviour, IClickableObject, IDropHandler
             {
                 eventManager.InvokeInteract(itemId);
                 hasItem = false;
+                inspectText = inspectTextAfterInteract;
             }
             gameState.UpdateObject(this);
         }

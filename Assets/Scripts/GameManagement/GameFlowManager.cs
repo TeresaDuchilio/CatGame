@@ -41,6 +41,10 @@ public class GameFlowManager : MonoBehaviour
                 FredKitchen = GameObject.FindGameObjectWithTag("FredKitchen");
                 cutscene.PlayWalkCutscene(FredKitchen, new Vector3(-6, 0.5f, -5.5f), new Vector3(-5.5f, 0.5f, -0.5f));
                 gameState.gameFlowId = 3;
+                //activate leckerlie box
+                break;
+            case 4:
+
                 break;
             default:
                 break;

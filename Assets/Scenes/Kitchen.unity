@@ -320,7 +320,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 215796121}
-  - component: {fileID: 215796124}
   - component: {fileID: 215796123}
   - component: {fileID: 215796122}
   m_Layer: 0
@@ -359,10 +358,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 215796120}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f133db29f00321643848fbbe751031c3, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b44c9450dd7b5e499d60671c33972af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorType: 1
+  ID: 8
+  inspectText:
+  - Leckerlies
+  inspectTextAfterInteract:
+  - nichts
+  itemId: 0
+  hasItem: 0
+  interactable: 1
+  interactItemId: 5
+  gameFlowId: 4
 --- !u!65 &215796123
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -376,26 +384,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7781717, y: 2.333712, z: 1.1361842}
   m_Center: {x: 0.32091412, y: 1.1251917, z: -0.5045376}
---- !u!114 &215796124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215796120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b44c9450dd7b5e499d60671c33972af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: 5
-  inspectText: []
-  inspectTextAfterInteract: []
-  itemId: 0
-  hasItem: 0
-  interactable: 0
-  interactItemId: 0
-  gameFlowId: 0
 --- !u!1 &380259612
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,33 +804,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 4
   inspectText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ein Regal
+  - Ganz oben liegen Leckerlies
+  - Da komme ich nicht dran
   inspectTextAfterInteract:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  itemId: 1
+  - Ein Regal
+  - Nichts interessantes zu sehen
+  itemId: 2
   hasItem: 0
   interactable: 1
   interactItemId: 4
@@ -1657,10 +1625,10 @@ MonoBehaviour:
   - Kalte
   - Kaelte
   inspectTextAfterInteract: []
-  itemId: 2
-  hasItem: 1
+  itemId: 0
+  hasItem: 0
   interactable: 0
-  interactItemId: 1
+  interactItemId: 0
   gameFlowId: 0
 --- !u!114 &1097098117
 MonoBehaviour:
@@ -3716,21 +3684,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 3
   inspectText:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  inspectTextAfterInteract: []
+  - Ein Regal
+  - Da liegt das Federspielzeug!
+  inspectTextAfterInteract:
+  - Ein Regal
+  - Nichts interessantes zu sehen
   itemId: 1
   hasItem: 1
-  interactable: 1
+  interactable: 0
   interactItemId: 1
   gameFlowId: 0
 --- !u!114 &5968267921619111154
