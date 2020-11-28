@@ -658,7 +658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Mama
-  characterPosition: {x: -8.88, y: 3.4, z: -1.81}
+  characterPosition: {x: -8.88, y: 3.4, z: -2.09}
   rotation: 180
 --- !u!114 &1819851563
 MonoBehaviour:

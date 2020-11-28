@@ -9,6 +9,7 @@ TagManager:
   - Door
   - GeorgeFlur
   - FredKitchen
+  - Boxes
   layers:
   - Default
   - TransparentFX
