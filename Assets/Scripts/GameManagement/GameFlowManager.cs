@@ -9,13 +9,16 @@ public class GameFlowManager : MonoBehaviour
     GameObject FredKitchen;
     InteractObject Boxes;
     EventManager eventManager;
+    GoalManager goalManager;
     GameState gameState;
     Cutscene cutscene;
 
     private void Start()
     {
         MenuManager.Active = false;
-        eventManager = GameObject.FindWithTag("MasterObject").GetComponent<EventManager>();
+        GameObject MasterObject = GameObject.FindWithTag("MasterObject");
+        eventManager = MasterObject.GetComponent<EventManager>();
+        goalManager = MasterObject.GetComponent<GoalManager>();
         gameState = GameState.Instance;
         cutscene = new Cutscene();
     }
@@ -28,25 +31,24 @@ public class GameFlowManager : MonoBehaviour
                 GeorgeFlurPicture.SetActive(true);
                 GameObject.FindGameObjectsWithTag("GeorgeFlur").First().SetActive(false);
                 MenuManager.Active = true;
+                goalManager.ProgressGoal("George");
                 gameState.gameFlowId = 0;
                 break;
             case 1:
                 gameState.gameFlowId = 1;
                 break;
             case 2:
-                //give item, change text
                 eventManager.InvokeInteract(2);
                 gameState.gameFlowId = 2;
                 break;
             case 3:
-                //animation
                 FredKitchen = GameObject.FindGameObjectWithTag("FredKitchen");
                 Boxes = GameObject.FindGameObjectWithTag("Boxes").GetComponent<InteractObject>();
                 Boxes.hasItem = true;
                 Boxes.inspectText = new List<string>() { "Leckerlies!", "Ich hab viel zu kurze Arme" };
                 cutscene.PlayWalkCutscene(FredKitchen, new Vector3(-6, 0.5f, -5.5f), new Vector3(-5.5f, 0.5f, -0.5f));
+                goalManager.ProgressGoal("Fred");
                 gameState.gameFlowId = 3;
-                //activate leckerlie box
                 break;
             case 4:
 
