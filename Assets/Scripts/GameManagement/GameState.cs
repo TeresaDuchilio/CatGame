@@ -6,17 +6,22 @@ using UnityEngine;
 public sealed class GameState
 {
     public List<InteractState> Objects { get; set; }
+
+    public List<PickupState> PickUps { get; set; }
     public Inventory Inventory { get; set; }
     public string Scene { get; set; }
     public Vector3 AgentPosition { get; set; }
     public float AgentRotation { get; set; }
 
-    public int gameFlowId;
+    public int fredFlowId;
+    public int georgerFlowId;
 
     private GameState()
     {
         Objects = new List<InteractState>();
-        gameFlowId = -1;
+        PickUps = new List<PickupState>();
+        fredFlowId = -1;
+        georgerFlowId = -1;
     }
 
     private static readonly Lazy<GameState> lazy = new Lazy<GameState>(() => new GameState());
@@ -45,12 +50,23 @@ public sealed class GameState
         }
     }
 
+    public void DisablePickup(PickUpObject pickUp)
+    {
+        foreach(PickupState pick in PickUps)
+        {
+            if(pick.ID == pickUp.ID)
+            {
+                pick.active = false;
+            }
+        }
+    }
     public void SetGameState(GameState state)
     {
         this.AgentPosition = state.AgentPosition;
         this.AgentRotation = state.AgentRotation;
         this.Inventory = state.Inventory;
         this.Objects = state.Objects;
+        this.PickUps = state.PickUps;
         this.Scene = state.Scene;
     }
 
@@ -69,4 +85,14 @@ public sealed class GameState
         Objects.Add(state);
     }
     
+    public void AddPickUpState(PickUpObject pickup)
+    {
+        PickupState pickupState = new PickupState()
+        {
+            ID = pickup.ID,
+            active = true
+        };
+
+        PickUps.Add(pickupState);
+    }
 }

@@ -5,6 +5,9 @@ using UnityEngine;
 public class GameFlowManager : MonoBehaviour
 {
     public GameObject GeorgeFlurPicture;
+    public GameObject FredKitchenPicture;
+    public GameObject FredMamaPicture;
+
 
     GameObject FredKitchen;
     InteractObject Boxes;
@@ -32,26 +35,48 @@ public class GameFlowManager : MonoBehaviour
                 GameObject.FindGameObjectsWithTag("GeorgeFlur").First().SetActive(false);
                 MenuManager.Active = true;
                 goalManager.ProgressGoal("George");
-                gameState.gameFlowId = 0;
-                break;
-            case 1:
-                gameState.gameFlowId = 1;
+                gameState.georgerFlowId++;
                 break;
             case 2:
                 eventManager.InvokeInteract(2);
-                gameState.gameFlowId = 2;
-                break;
-            case 3:
-                FredKitchen = GameObject.FindGameObjectWithTag("FredKitchen");
                 Boxes = GameObject.FindGameObjectWithTag("Boxes").GetComponent<InteractObject>();
                 Boxes.hasItem = true;
-                Boxes.inspectText = new List<string>() { "Leckerlies!", "Ich hab viel zu kurze Arme" };
-                cutscene.PlayWalkCutscene(FredKitchen, new Vector3(-6, 0.5f, -5.5f), new Vector3(-5.5f, 0.5f, -0.5f));
+                Boxes.inspectText = new List<string>() { "Leckerlies!", "Ich hab viel zu kurze Arme" };                
+                break;
+            case 3:
+                FredKitchenPicture.SetActive(true);
+                MenuManager.Active = true;
+                FredKitchen = GameObject.FindGameObjectWithTag("FredKitchen");                
                 goalManager.ProgressGoal("Fred");
-                gameState.gameFlowId = 3;
+                gameState.fredFlowId++;
+                cutscene.PlayWalkCutscene(FredKitchen, new Vector3(-6, 0.5f, -5.5f), new Vector3(-5.5f, 0.5f, -0.5f));
                 break;
             case 4:
-
+                //cutscene
+                GameObject.FindGameObjectsWithTag("GeorgeFlur").First().SetActive(false);
+                goalManager.ProgressGoal("George");
+                gameState.georgerFlowId++;
+                break;
+            case 5:
+                FredMamaPicture.SetActive(true);
+                MenuManager.Active = true;
+                goalManager.ProgressGoal("Fred");
+                gameState.fredFlowId++;
+                break;
+            case 6:
+                eventManager.InvokeInteract(3);
+                break;
+            case 7:
+                //cutscene
+                GameObject.FindGameObjectsWithTag("GeorgeFlur").First().SetActive(false);
+                goalManager.ProgressGoal("George");
+                gameState.georgerFlowId++;
+                break;
+            case 8:
+                //cutscene
+                GameObject.FindGameObjectsWithTag("FredKitchen").First().SetActive(false);
+                goalManager.ProgressGoal("Fred");
+                gameState.fredFlowId++;
                 break;
             default:
                 break;
