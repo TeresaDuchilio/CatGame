@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Flur
-  characterPosition: {x: -6.14, y: 0.5, z: 2.35}
+  characterPosition: {x: -5.72, y: 0.5, z: 2.35}
   rotation: 90
 --- !u!114 &43068987
 MonoBehaviour:

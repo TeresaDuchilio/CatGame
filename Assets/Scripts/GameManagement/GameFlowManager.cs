@@ -5,9 +5,10 @@ using UnityEngine;
 public class GameFlowManager : MonoBehaviour
 {
     public GameObject GeorgeFlurPicture;
+    public GameObject GeorgeMamaPicture;
     public GameObject FredKitchenPicture;
     public GameObject FredMamaPicture;
-
+    public GameObject WinPicture;
 
     GameObject FredKitchen;
     InteractObject Boxes;
@@ -68,15 +69,25 @@ public class GameFlowManager : MonoBehaviour
                 break;
             case 7:
                 //cutscene
-                GameObject.FindGameObjectsWithTag("GeorgeFlur").First().SetActive(false);
+                var GeorgeMama = GameObject.FindGameObjectsWithTag("GeorgeFlur").First();
                 goalManager.ProgressGoal("George");
                 gameState.georgerFlowId++;
+                GeorgeMamaPicture.SetActive(true);
+                cutscene.PlayWalkCutscene(GeorgeMama, new Vector3(-12.28f, 3.15f, -5.41f), new Vector3(-8.5f, 3.15f, -1.3f));
+                if (gameState.fredFlowId == 2)
+                {
+                    WinPicture.SetActive(true);
+                }
                 break;
             case 8:
                 //cutscene
                 GameObject.FindGameObjectsWithTag("FredKitchen").First().SetActive(false);
                 goalManager.ProgressGoal("Fred");
                 gameState.fredFlowId++;
+                if (gameState.georgerFlowId == 2)
+                {
+                    WinPicture.SetActive(true);
+                }
                 break;
             default:
                 break;
