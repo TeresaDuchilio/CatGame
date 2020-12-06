@@ -4680,7 +4680,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 2
-  inspectText: []
+  inspectText:
+  - '"bla bla"'
   inspectTextAfterInteract: []
   itemId: 0
   hasItem: 0
