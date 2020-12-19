@@ -1416,7 +1416,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: b6921f876966e7249babe70465a1df9c,
         type: 3}
       propertyPath: m_TagString
-      value: FredKitchen
+      value: FredMama
       objectReference: {fileID: 0}
     - target: {fileID: -444521105353760620, guid: b6921f876966e7249babe70465a1df9c,
         type: 3}
@@ -1587,7 +1587,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787710626}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.2
   m_Height: 0.48
