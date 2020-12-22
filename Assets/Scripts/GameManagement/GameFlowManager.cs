@@ -36,7 +36,7 @@ public class GameFlowManager : MonoBehaviour
             case 0:
                 GeorgeFlurPicture.SetActive(true);
                 GeorgeFlur = GameObject.FindGameObjectWithTag("GeorgeFlur");
-                MenuManager.Active = true;
+                MenuManager.ActivateMenu();
                 goalManager.ProgressGoal("George");
                 gameState.georgerFlowId++;
                 cutscene.PlayWalkCutscene(GeorgeFlur, new Vector3(-4.07f, 0.13f, 3.1f), new Vector3(-5.05f, 0.13f, 1f));
@@ -49,7 +49,7 @@ public class GameFlowManager : MonoBehaviour
                 break;
             case 3:
                 FredKitchenPicture.SetActive(true);
-                MenuManager.Active = true;
+                MenuManager.ActivateMenu();
                 FredKitchen = GameObject.FindGameObjectWithTag("FredKitchen");                
                 goalManager.ProgressGoal("Fred");
                 gameState.fredFlowId++;
@@ -64,7 +64,7 @@ public class GameFlowManager : MonoBehaviour
             case 5:
                 FredMama = GameObject.FindGameObjectWithTag("FredMama");
                 FredMamaPicture.SetActive(true);
-                MenuManager.Active = true;
+                MenuManager.ActivateMenu();
                 goalManager.ProgressGoal("Fred");
                 gameState.fredFlowId++;
                 cutscene.PlayWalkCutscene(FredMama, new Vector3(-6.48f, 3.26f, -5.5f), new Vector3(-8.5f, 3.15f, -1.3f));
@@ -77,12 +77,12 @@ public class GameFlowManager : MonoBehaviour
                 var GeorgeMama = GameObject.FindGameObjectsWithTag("GeorgeFlur").First();
                 goalManager.ProgressGoal("George");
                 gameState.georgerFlowId++;
-                MenuManager.Active = true;
+                MenuManager.ActivateMenu();
                 GeorgeMamaPicture.SetActive(true);
                 cutscene.PlayWalkCutscene(GeorgeMama, new Vector3(-12.28f, 3.15f, -5.41f), new Vector3(-8.5f, 3.15f, -1.3f));
                 if (gameState.fredFlowId == 2)
                 {
-                    MenuManager.Active = true;
+                    MenuManager.ActivateMenu();
                     WinPicture.SetActive(true);
                 }
                 break;
@@ -93,7 +93,7 @@ public class GameFlowManager : MonoBehaviour
                 cutscene.PlayWalkCutscene(FredKitchen, new Vector3(-13.81f, 3.3f, 11.3f), new Vector3(-12.35f, 1.99f, 6.83f));
                 if (gameState.georgerFlowId == 2)
                 {
-                    MenuManager.Active = true;
+                    MenuManager.ActivateMenu();
                     WinPicture.SetActive(true);
                 }
                 break;
