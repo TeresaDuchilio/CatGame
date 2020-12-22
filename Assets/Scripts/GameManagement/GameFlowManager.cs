@@ -59,7 +59,7 @@ public class GameFlowManager : MonoBehaviour
                 GeorgeFlur = GameObject.FindGameObjectWithTag("GeorgeFlur");
                 goalManager.ProgressGoal("George");
                 gameState.georgerFlowId++;
-                cutscene.PlayWalkCutscene(GeorgeFlur, new Vector3(-9.71f, 3.42f, -0.62f), new Vector3(-9.18f, 3.42f, 4.31f));
+                cutscene.PlayWalkCutscene(GeorgeFlur, new Vector3(-9.71f, 3.42f, 1f), new Vector3(-9.18f, 3.42f, 4.31f));
                 break;
             case 5:
                 FredMama = GameObject.FindGameObjectWithTag("FredMama");

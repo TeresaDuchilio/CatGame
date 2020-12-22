@@ -434,7 +434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Bathroom
-  characterPosition: {x: -9.08, y: 0.5, z: 2.01}
+  characterPosition: {x: -9.91, y: 0.5, z: 2.01}
   rotation: -90
 --- !u!114 &678861135
 MonoBehaviour:
@@ -1321,6 +1321,18 @@ CapsuleCollider:
   m_Height: 0.17
   m_Direction: 0
   m_Center: {x: 0.08, y: 0.25, z: 0.15}
+--- !u!114 &1342312771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342312762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eb0298b5278edc43a773a709b914124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1488318712
 GameObject:
   m_ObjectHideFlags: 0
