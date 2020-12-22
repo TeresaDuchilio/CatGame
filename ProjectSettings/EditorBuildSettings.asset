@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Flur.unity
+    guid: 925135d6ab8cba344a2ae1ece56e7665
+  - enabled: 1
+    path: Assets/Scenes/Bathroom.unity
+    guid: 44eb5cc82c3f63142b2685215399ff52
+  - enabled: 1
+    path: Assets/Scenes/FlurOben.unity
+    guid: aec9cc73aceb68a468cdc4452ee27b9f
+  - enabled: 1
+    path: Assets/Scenes/MasterScene.unity
+    guid: 08c78b70be382a441a01ee013f31a0e4
+  - enabled: 1
+    path: Assets/Scenes/Kitchen.unity
+    guid: fd71f6c0d5c43bd4896fe0f65d95619d
+  - enabled: 1
+    path: Assets/Scenes/Mama.unity
+    guid: fcb3d72f51f39af4583440284def9afd
+  - enabled: 1
+    path: Assets/Scenes/Colin.unity
+    guid: 323fd6d030bc85d42a208337c3e73c20
+  - enabled: 1
+    path: Assets/Scenes/Durchgangszimmer.unity
+    guid: 6873a5e0f69cf3b41b1cf9870b120fd6
+  - enabled: 1
+    path: Assets/Scenes/GuestRoom.unity
+    guid: b3f57e5ec5e896f46ace69f1d36fb3fe
+  m_configObjects: {}
