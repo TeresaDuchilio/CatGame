@@ -731,7 +731,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 14
-  inspectText: []
+  inspectText:
+  - Ein komischer Stock den sich Menschen in die Haare stecken
   itemId: 5
 --- !u!65 &983172001
 BoxCollider:

@@ -1148,7 +1148,6 @@ GameObject:
   - component: {fileID: 1149214632}
   - component: {fileID: 1149214638}
   - component: {fileID: 1149214637}
-  - component: {fileID: 1149214639}
   m_Layer: 0
   m_Name: Stock
   m_TagString: Untagged
@@ -1170,7 +1169,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 7
   inspectText:
-  - Ein Stock
+  - Eine Art... Stock?
+  - "Es \xE4hnelt einem Stock, aber besteht aus etwas komplett anderem..."
+  - Ich kenne es nicht, aber das ist wohl egal - ich kann den Stock trotzdem verwenden.
   itemId: 4
 --- !u!65 &1149214633
 BoxCollider:
@@ -1273,29 +1274,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   from: 0
   until: 1
---- !u!114 &1149214639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1149214631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b44c9450dd7b5e499d60671c33972af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: 27
-  inspectText:
-  - Eine Art... Stock?
-  - "Es \xE4hnelt einem Stock, aber besteht aus etwas komplett anderem..."
-  - Ich kenne es nicht, aber das ist wohl egal - ich kann den Stock trotzdem verwenden.
-  inspectTextAfterInteract: []
-  itemId: 0
-  hasItem: 0
-  interactable: 0
-  interactItemId: 0
-  gameFlowId: 0
 --- !u!1 &1194506341
 GameObject:
   m_ObjectHideFlags: 0

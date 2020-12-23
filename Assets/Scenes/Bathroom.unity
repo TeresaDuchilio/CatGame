@@ -389,7 +389,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 15
-  inspectText: []
+  inspectText:
+  - Klopapier
   itemId: 6
 --- !u!65 &283070677
 BoxCollider:
