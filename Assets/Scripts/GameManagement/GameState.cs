@@ -79,7 +79,8 @@ public sealed class GameState
             itemId = interactObject.itemId,
             interactItemId = interactObject.interactItemId,
             hasItem = interactObject.hasItem,
-            interactable = interactObject.interactable
+            interactable = interactObject.interactable,
+            gameFlowId = interactObject.gameFlowId
         };
 
         Objects.Add(state);

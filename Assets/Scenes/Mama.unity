@@ -496,6 +496,32 @@ MonoBehaviour:
   interactable: 0
   interactItemId: 0
   gameFlowId: 0
+--- !u!65 &476792732
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476792730}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2813336, y: 2.72462, z: 0.9716944}
+  m_Center: {x: -0.35933322, y: -0.36231008, z: -0.5141527}
+--- !u!114 &476792733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476792730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f133db29f00321643848fbbe751031c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorType: 2
 --- !u!1001 &741426139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -669,9 +695,9 @@ GameObject:
   - component: {fileID: 983172004}
   - component: {fileID: 983172003}
   - component: {fileID: 983172002}
-  - component: {fileID: 983172001}
   - component: {fileID: 983172000}
   - component: {fileID: 983171999}
+  - component: {fileID: 983172001}
   m_Layer: 0
   m_Name: Haarnadel
   m_TagString: Untagged
@@ -718,8 +744,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.05, y: 1.98, z: 1.71}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 30.6, y: 20.56, z: 40.04}
+  m_Center: {x: 4.1, y: 0.004609883, z: 12.40186}
 --- !u!23 &983172002
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -738,7 +764,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8f526ea34f026d748bf0be09a1c5bd1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -766,7 +792,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983171998}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -2384455440688913106, guid: f1d66d0ac92c2cc468423990e518db0a, type: 3}
 --- !u!4 &983172004
 Transform:
   m_ObjectHideFlags: 0
@@ -774,13 +800,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983171998}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.65, y: 5.36, z: -8.37}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: -0.6139409, z: 0, w: 0.789352}
+  m_LocalPosition: {x: -5.65, y: 4.736, z: -8.929}
+  m_LocalScale: {x: 0.025, y: 0.025, z: 0.015}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -75.75, z: 0}
 --- !u!1 &1173630100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,6 +1149,32 @@ MonoBehaviour:
   interactable: 0
   interactItemId: 0
   gameFlowId: 0
+--- !u!114 &1248832100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248832098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f133db29f00321643848fbbe751031c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorType: 2
+--- !u!65 &1248832101
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248832098}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8893623, y: 1.9787565, z: 1.521903}
+  m_Center: {x: 0.04725158, y: 0.0025939618, z: 0.2713763}
 --- !u!1 &1419934026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,7 +1523,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: b6921f876966e7249babe70465a1df9c,
         type: 3}
       propertyPath: m_TagString
-      value: FredKitchen
+      value: FredMama
       objectReference: {fileID: 0}
     - target: {fileID: -444521105353760620, guid: b6921f876966e7249babe70465a1df9c,
         type: 3}
@@ -1607,7 +1659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b44c9450dd7b5e499d60671c33972af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 12
+  ID: 98
   inspectText:
   - Fred lauert mir unter dem Bett auf.
   - Vielleicht sollte ich ihm etwas bringen, um ihn abzulenken.
@@ -1627,7 +1679,7 @@ Animator:
   m_GameObject: {fileID: 1787710626}
   m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 68335e3b243040948bb0cd3bfd4573fe, type: 2}
+  m_Controller: {fileID: 9100000, guid: b768fac4c7c85ba489e5fbfa5934184c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1644,7 +1696,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787710626}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.2
   m_Height: 0.48
@@ -1666,6 +1718,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1787710634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787710626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eb0298b5278edc43a773a709b914124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1848654520
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2397,10 +2461,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1848654521}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.6, y: 0.91, z: 0.78}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &1848654526
 Animator:
@@ -2412,7 +2476,7 @@ Animator:
   m_GameObject: {fileID: 1848654521}
   m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 68335e3b243040948bb0cd3bfd4573fe, type: 2}
+  m_Controller: {fileID: 9100000, guid: b768fac4c7c85ba489e5fbfa5934184c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2459,6 +2523,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1848654529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848654521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eb0298b5278edc43a773a709b914124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1929784900
 GameObject:
   m_ObjectHideFlags: 0
@@ -2659,3 +2735,29 @@ MonoBehaviour:
   interactable: 0
   interactItemId: 0
   gameFlowId: 0
+--- !u!65 &1938334285
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938334283}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8893633, y: 1.9787574, z: 1.5219039}
+  m_Center: {x: 0.047251593, y: 0.0025939005, z: 0.27137637}
+--- !u!114 &1938334286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938334283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f133db29f00321643848fbbe751031c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorType: 2

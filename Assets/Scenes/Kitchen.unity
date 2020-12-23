@@ -2994,7 +2994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f133db29f00321643848fbbe751031c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorType: 1
+  cursorType: 2
 --- !u!1001 &1160676591
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4680,7 +4680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b44c9450dd7b5e499d60671c33972af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 2
+  ID: 99
   inspectText:
   - '"Wenn du mir nicht gibts, was ich will, kannst du nicht auf die Couch."'
   inspectTextAfterInteract: []
@@ -4699,7 +4699,7 @@ Animator:
   m_GameObject: {fileID: 1809454162}
   m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 68335e3b243040948bb0cd3bfd4573fe, type: 2}
+  m_Controller: {fileID: 9100000, guid: b768fac4c7c85ba489e5fbfa5934184c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -4729,10 +4729,10 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1809454162}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.2
-  m_Height: 0.48
+  m_Radius: 0.25
+  m_Height: 0.76
   m_Direction: 2
   m_Center: {x: 0, y: 0.18, z: 0}
 --- !u!195 &1809454167
@@ -4787,6 +4787,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   from: -1
   until: 0
+--- !u!114 &1809454170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809454162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eb0298b5278edc43a773a709b914124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1848124231
 GameObject:
   m_ObjectHideFlags: 0
@@ -5122,6 +5134,32 @@ MonoBehaviour:
   interactable: 0
   interactItemId: 0
   gameFlowId: 0
+--- !u!65 &1927422976
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927422974}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.23, y: 1.32, z: 1.3497775}
+  m_Center: {x: 0.47275203, y: 0.45951456, z: -0.32511118}
+--- !u!114 &1927422977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927422974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f133db29f00321643848fbbe751031c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorType: 2
 --- !u!1 &1982569418
 GameObject:
   m_ObjectHideFlags: 0
@@ -5792,6 +5830,8 @@ GameObject:
   - component: {fileID: 5811648083901037714}
   - component: {fileID: 259966671098986603}
   - component: {fileID: 1992632020565095608}
+  - component: {fileID: 1992632020565095609}
+  - component: {fileID: 1992632020565095610}
   m_Layer: 0
   m_Name: sofa
   m_TagString: Untagged
@@ -5822,6 +5862,32 @@ MonoBehaviour:
   interactable: 0
   interactItemId: 0
   gameFlowId: 0
+--- !u!65 &1992632020565095609
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992632020565095607}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2196169, y: 2.3278742, z: 1.1663493}
+  m_Center: {x: 3.736876, y: 1.5364379, z: -2.8167489}
+--- !u!114 &1992632020565095610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992632020565095607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f133db29f00321643848fbbe751031c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorType: 2
 --- !u!1 &2000724392337169831
 GameObject:
   m_ObjectHideFlags: 0

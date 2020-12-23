@@ -16,7 +16,7 @@ public class AnimationController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (agent.remainingDistance <= 1f) 
+        if (agent.isActiveAndEnabled && agent.remainingDistance <= 1f) 
         {
             animator.SetInteger("WalkState", 0);
         }

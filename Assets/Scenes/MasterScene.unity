@@ -275,7 +275,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 588928206}
   newPositionFound: 0
-  Inventory: {fileID: 170152661}
 --- !u!114 &36672761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,7 +401,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 588928206}
   newPositionFound: 0
-  Inventory: {fileID: 170152661}
 --- !u!225 &54566357
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -511,7 +509,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 588928206}
   newPositionFound: 0
-  Inventory: {fileID: 170152661}
 --- !u!114 &79908406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -834,6 +831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 983ba30432a2bdd458c904c0c5306da3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMovement: {fileID: 0}
 --- !u!114 &170152661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -886,6 +884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 983ba30432a2bdd458c904c0c5306da3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMovement: {fileID: 0}
 --- !u!114 &170152664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1074,7 +1073,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 12.258065}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &368243656
 MonoBehaviour:
@@ -1210,7 +1209,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 588928206}
   newPositionFound: 0
-  Inventory: {fileID: 170152661}
 --- !u!114 &373972388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1328,7 +1326,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 588928206}
   newPositionFound: 0
-  Inventory: {fileID: 170152661}
 --- !u!114 &440225747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1446,7 +1443,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 588928206}
   newPositionFound: 0
-  Inventory: {fileID: 170152661}
 --- !u!114 &460293439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2229,7 +2225,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 588928206}
   newPositionFound: 0
-  Inventory: {fileID: 170152661}
 --- !u!114 &1057105195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2318,8 +2313,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
+    m_Left: 15
+    m_Right: 10
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
@@ -2327,7 +2322,7 @@ MonoBehaviour:
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
-  m_ChildControlHeight: 0
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
 --- !u!114 &1087523461
@@ -2733,7 +2728,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 588928206}
   newPositionFound: 0
-  Inventory: {fileID: 170152661}
 --- !u!114 &1251371130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3595,7 +3589,7 @@ Animator:
   m_GameObject: {fileID: 8296172668510563247}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 68335e3b243040948bb0cd3bfd4573fe, type: 2}
+  m_Controller: {fileID: 9100000, guid: b768fac4c7c85ba489e5fbfa5934184c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

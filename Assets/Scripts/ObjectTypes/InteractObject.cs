@@ -34,6 +34,7 @@ public class InteractObject : MonoBehaviour, IClickableObject, IDropHandler
             hasItem = thisObject.hasItem;
             interactable = thisObject.interactable;
             inspectText = thisObject.inspectText;
+            gameFlowId = thisObject.gameFlowId;
         }
         else
         {
@@ -68,7 +69,7 @@ public class InteractObject : MonoBehaviour, IClickableObject, IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
         var item = eventData.pointerDrag.GetComponent<Item>();
-        if(item.Id == interactItemId)
+        if(interactable && item.Id == interactItemId)
         {
             Debug.Log("Do something with this item");
             interactable = false;
