@@ -33,7 +33,7 @@ public class MoveSceneObject : MonoBehaviour, IClickableObject
             gameState.Scene = sceneName;
             eventManager.InvoceSceneChange(sceneName, characterPosition, rotation);
         }
-        else
+        else if(other.isTrigger)
         {
             Destroy(other.gameObject);
         }
