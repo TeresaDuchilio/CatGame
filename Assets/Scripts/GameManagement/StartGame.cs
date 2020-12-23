@@ -1,19 +1,26 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviour
 {
-    EventManager eventManager;
+    public GameObject menu;
     public string startScene;
-    public Vector3 startPosition;
-    public float startRotation;
 
-    void Start()
+    bool firstStart;
+
+    public StartGame()
     {
-        eventManager = GameObject.FindWithTag("MasterObject").GetComponent<EventManager>();
+        firstStart = true;
     }
 
     public void NewGame()
     {
-        eventManager.InvoceSceneChange(startScene, startPosition, startRotation);
+        if (firstStart)
+        {
+            SceneManager.LoadScene(startScene);
+            firstStart = false;
+        }
+        menu.SetActive(false);
+        MenuManager.Active = false;
     }
 }

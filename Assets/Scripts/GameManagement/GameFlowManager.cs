@@ -21,7 +21,7 @@ public class GameFlowManager : MonoBehaviour
 
     private void Start()
     {
-        MenuManager.Active = false;
+        MenuManager.Active = true;
         GameObject MasterObject = GameObject.FindWithTag("MasterObject");
         eventManager = MasterObject.GetComponent<EventManager>();
         goalManager = MasterObject.GetComponent<GoalManager>();

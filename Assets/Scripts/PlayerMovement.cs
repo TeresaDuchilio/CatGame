@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     float warpRotation;
     string currentScene;
 
+    public GameObject Menu;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -26,6 +28,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!MenuManager.Active)
         {
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                Menu.SetActive(true);
+                MenuManager.ActivateMenu();
+            }
+
             if (Input.GetMouseButtonDown(0))
             {
                 RaycastHit hit;

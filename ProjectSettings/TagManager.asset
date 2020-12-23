@@ -11,6 +11,7 @@ TagManager:
   - FredKitchen
   - Boxes
   - FredMama
+  - MainMenu
   layers:
   - Default
   - TransparentFX
